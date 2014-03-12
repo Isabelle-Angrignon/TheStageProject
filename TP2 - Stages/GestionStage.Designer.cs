@@ -276,7 +276,7 @@
             this.Controls.Add(this.RTB_Description);
             this.Controls.Add(this.DGV_GestionStage);
             this.Name = "GestionStage";
-            this.Text = "GestionStage";
+            this.Text = "Gestion des stages";
             this.Load += new System.EventHandler(this.GestionStage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionStage)).EndInit();
             this.ResumeLayout(false);

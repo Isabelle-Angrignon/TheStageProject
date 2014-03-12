@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace TP2___Stages
 {
-    public partial class Form1 : Form
+    public partial class FormPrincipale : Form
     {
-        public Form1()
+        public FormPrincipale()
         {
             InitializeComponent();
+        }
+
+        private void stagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionStage GestionS = new GestionStage();
+            GestionS.ShowDialog();
         }
     }
 }

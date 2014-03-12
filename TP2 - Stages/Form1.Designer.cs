@@ -1,6 +1,6 @@
 ﻿namespace TP2___Stages
 {
-    partial class Form1
+    partial class FormPrincipale
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -96,6 +96,7 @@
             this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
             this.stagesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stagesToolStripMenuItem.Text = "Stages";
+            this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
             // 
             // entreprisesToolStripMenuItem
             // 
@@ -106,14 +107,14 @@
             // DGV_Places
             // 
             this.DGV_Places.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Places.Location = new System.Drawing.Point(35, 323);
+            this.DGV_Places.Location = new System.Drawing.Point(30, 323);
             this.DGV_Places.Name = "DGV_Places";
             this.DGV_Places.Size = new System.Drawing.Size(505, 251);
             this.DGV_Places.TabIndex = 1;
             // 
             // BN_Assigner
             // 
-            this.BN_Assigner.Location = new System.Drawing.Point(449, 275);
+            this.BN_Assigner.Location = new System.Drawing.Point(444, 275);
             this.BN_Assigner.Name = "BN_Assigner";
             this.BN_Assigner.Size = new System.Drawing.Size(91, 23);
             this.BN_Assigner.TabIndex = 5;
@@ -123,7 +124,7 @@
             // DGV_Etudiants
             // 
             this.DGV_Etudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Etudiants.Location = new System.Drawing.Point(35, 94);
+            this.DGV_Etudiants.Location = new System.Drawing.Point(30, 94);
             this.DGV_Etudiants.Name = "DGV_Etudiants";
             this.DGV_Etudiants.Size = new System.Drawing.Size(196, 175);
             this.DGV_Etudiants.TabIndex = 6;
@@ -131,7 +132,7 @@
             // DGV_Stages
             // 
             this.DGV_Stages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Stages.Location = new System.Drawing.Point(241, 94);
+            this.DGV_Stages.Location = new System.Drawing.Point(236, 94);
             this.DGV_Stages.Name = "DGV_Stages";
             this.DGV_Stages.Size = new System.Drawing.Size(299, 175);
             this.DGV_Stages.TabIndex = 7;
@@ -139,7 +140,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 303);
+            this.label1.Location = new System.Drawing.Point(41, 303);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 8;
@@ -148,7 +149,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 78);
+            this.label2.Location = new System.Drawing.Point(41, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 9;
@@ -157,7 +158,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(253, 78);
+            this.label3.Location = new System.Drawing.Point(248, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 10;
@@ -165,14 +166,14 @@
             // 
             // BN_TypeInfo
             // 
-            this.BN_TypeInfo.Location = new System.Drawing.Point(35, 39);
+            this.BN_TypeInfo.Location = new System.Drawing.Point(30, 39);
             this.BN_TypeInfo.Name = "BN_TypeInfo";
             this.BN_TypeInfo.Size = new System.Drawing.Size(75, 23);
             this.BN_TypeInfo.TabIndex = 11;
             this.BN_TypeInfo.Text = "Gest/Indu";
             this.BN_TypeInfo.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,8 +188,8 @@
             this.Controls.Add(this.DGV_Places);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormPrincipale";
+            this.Text = "Stages";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Places)).EndInit();
