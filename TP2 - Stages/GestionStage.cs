@@ -16,5 +16,10 @@ namespace TP2___Stages
         {
             InitializeComponent();
         }
+
+        private void GestionStage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
