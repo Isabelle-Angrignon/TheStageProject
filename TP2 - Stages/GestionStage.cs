@@ -12,6 +12,7 @@ namespace TP2___Stages
 {
     public partial class GestionStage : Form
     {
+        int NumStageDefaut = 0;
         public GestionStage()
         {
             InitializeComponent();

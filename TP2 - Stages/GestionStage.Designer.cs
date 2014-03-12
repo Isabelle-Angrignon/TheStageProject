@@ -28,215 +28,257 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.DGV_GestionStage = new System.Windows.Forms.DataGridView();
+            this.RTB_Description = new System.Windows.Forms.RichTextBox();
+            this.TB_Plateforme = new System.Windows.Forms.TextBox();
+            this.TB_Logiciel = new System.Windows.Forms.TextBox();
+            this.TB_Type = new System.Windows.Forms.TextBox();
+            this.TB_NomEnt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.BTN_Ok = new System.Windows.Forms.Button();
+            this.BTN_Cancel = new System.Windows.Forms.Button();
+            this.BTN_AjoutStage = new System.Windows.Forms.Button();
+            this.BTN_DeleteStage = new System.Windows.Forms.Button();
+            this.BTN_EditStage = new System.Windows.Forms.Button();
+            this.BTN_ClearStage = new System.Windows.Forms.Button();
+            this.LB_NumStage = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DTP_DebutStage = new System.Windows.Forms.DateTimePicker();
+            this.DTP_FinStage = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionStage)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DGV_GestionStage
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(547, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 484);
-            this.dataGridView1.TabIndex = 0;
+            this.DGV_GestionStage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_GestionStage.Location = new System.Drawing.Point(463, 12);
+            this.DGV_GestionStage.Name = "DGV_GestionStage";
+            this.DGV_GestionStage.Size = new System.Drawing.Size(708, 418);
+            this.DGV_GestionStage.TabIndex = 0;
             // 
-            // richTextBox1
+            // RTB_Description
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(25, 386);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(484, 110);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.RTB_Description.Location = new System.Drawing.Point(27, 320);
+            this.RTB_Description.Name = "RTB_Description";
+            this.RTB_Description.Size = new System.Drawing.Size(417, 110);
+            this.RTB_Description.TabIndex = 1;
+            this.RTB_Description.Text = "";
             // 
-            // textBox1
+            // TB_Plateforme
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.TB_Plateforme.Location = new System.Drawing.Point(136, 81);
+            this.TB_Plateforme.Name = "TB_Plateforme";
+            this.TB_Plateforme.Size = new System.Drawing.Size(100, 20);
+            this.TB_Plateforme.TabIndex = 3;
             // 
-            // textBox2
+            // TB_Logiciel
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.TB_Logiciel.Location = new System.Drawing.Point(136, 107);
+            this.TB_Logiciel.Name = "TB_Logiciel";
+            this.TB_Logiciel.Size = new System.Drawing.Size(100, 20);
+            this.TB_Logiciel.TabIndex = 4;
             // 
-            // textBox3
+            // TB_Type
             // 
-            this.textBox3.Location = new System.Drawing.Point(102, 164);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.TB_Type.Location = new System.Drawing.Point(136, 133);
+            this.TB_Type.Name = "TB_Type";
+            this.TB_Type.Size = new System.Drawing.Size(100, 20);
+            this.TB_Type.TabIndex = 5;
             // 
-            // textBox4
+            // TB_NomEnt
             // 
-            this.textBox4.Location = new System.Drawing.Point(102, 190);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(102, 216);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 6;
+            this.TB_NomEnt.Location = new System.Drawing.Point(136, 159);
+            this.TB_NomEnt.Name = "TB_NomEnt";
+            this.TB_NomEnt.Size = new System.Drawing.Size(100, 20);
+            this.TB_NomEnt.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 86);
+            this.label1.Location = new System.Drawing.Point(31, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
+            this.label1.Text = "Numero de stage :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 145);
+            this.label3.Location = new System.Drawing.Point(31, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
+            this.label3.Text = "Plateforme :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 171);
+            this.label4.Location = new System.Drawing.Point(31, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
+            this.label4.Text = "Logiciel :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 197);
+            this.label5.Location = new System.Drawing.Point(31, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            this.label5.Text = "Type :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 223);
+            this.label6.Location = new System.Drawing.Point(31, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(103, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
+            this.label6.Text = "Nom de l\'entreprise :";
             // 
-            // button1
+            // BTN_Ok
             // 
-            this.button1.Location = new System.Drawing.Point(935, 516);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTN_Ok.Location = new System.Drawing.Point(1096, 436);
+            this.BTN_Ok.Name = "BTN_Ok";
+            this.BTN_Ok.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Ok.TabIndex = 13;
+            this.BTN_Ok.Text = "Accepter";
+            this.BTN_Ok.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BTN_Cancel
             // 
-            this.button2.Location = new System.Drawing.Point(854, 516);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BTN_Cancel.Location = new System.Drawing.Point(1015, 436);
+            this.BTN_Cancel.Name = "BTN_Cancel";
+            this.BTN_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Cancel.TabIndex = 14;
+            this.BTN_Cancel.Text = "Annuler";
+            this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BTN_AjoutStage
             // 
-            this.button3.Location = new System.Drawing.Point(374, 86);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 41);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BTN_AjoutStage.Image = global::TP2___Stages.Properties.Resources.Add_Neutral;
+            this.BTN_AjoutStage.Location = new System.Drawing.Point(388, 65);
+            this.BTN_AjoutStage.Name = "BTN_AjoutStage";
+            this.BTN_AjoutStage.Size = new System.Drawing.Size(45, 41);
+            this.BTN_AjoutStage.TabIndex = 15;
+            this.BTN_AjoutStage.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // BTN_DeleteStage
             // 
-            this.button4.Location = new System.Drawing.Point(374, 133);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 41);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BTN_DeleteStage.Image = global::TP2___Stages.Properties.Resources.Delete_Neutral;
+            this.BTN_DeleteStage.Location = new System.Drawing.Point(388, 112);
+            this.BTN_DeleteStage.Name = "BTN_DeleteStage";
+            this.BTN_DeleteStage.Size = new System.Drawing.Size(45, 41);
+            this.BTN_DeleteStage.TabIndex = 16;
+            this.BTN_DeleteStage.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // BTN_EditStage
             // 
-            this.button5.Location = new System.Drawing.Point(374, 180);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 41);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BTN_EditStage.Image = global::TP2___Stages.Properties.Resources.Edit_Neutral;
+            this.BTN_EditStage.Location = new System.Drawing.Point(388, 159);
+            this.BTN_EditStage.Name = "BTN_EditStage";
+            this.BTN_EditStage.Size = new System.Drawing.Size(45, 41);
+            this.BTN_EditStage.TabIndex = 17;
+            this.BTN_EditStage.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // BTN_ClearStage
             // 
-            this.button6.Location = new System.Drawing.Point(374, 227);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(45, 41);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BTN_ClearStage.Image = global::TP2___Stages.Properties.Resources.Clear_Neutral;
+            this.BTN_ClearStage.Location = new System.Drawing.Point(388, 206);
+            this.BTN_ClearStage.Name = "BTN_ClearStage";
+            this.BTN_ClearStage.Size = new System.Drawing.Size(45, 41);
+            this.BTN_ClearStage.TabIndex = 18;
+            this.BTN_ClearStage.UseVisualStyleBackColor = true;
+            // 
+            // LB_NumStage
+            // 
+            this.LB_NumStage.AutoSize = true;
+            this.LB_NumStage.Location = new System.Drawing.Point(133, 56);
+            this.LB_NumStage.Name = "LB_NumStage";
+            this.LB_NumStage.Size = new System.Drawing.Size(35, 13);
+            this.LB_NumStage.TabIndex = 19;
+            this.LB_NumStage.Text = "label7";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 196);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Début du stage :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(31, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Fin du stage :";
+            // 
+            // DTP_DebutStage
+            // 
+            this.DTP_DebutStage.Location = new System.Drawing.Point(140, 190);
+            this.DTP_DebutStage.Name = "DTP_DebutStage";
+            this.DTP_DebutStage.Size = new System.Drawing.Size(200, 20);
+            this.DTP_DebutStage.TabIndex = 22;
+            // 
+            // DTP_FinStage
+            // 
+            this.DTP_FinStage.Location = new System.Drawing.Point(140, 218);
+            this.DTP_FinStage.Name = "DTP_FinStage";
+            this.DTP_FinStage.Size = new System.Drawing.Size(200, 20);
+            this.DTP_FinStage.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 304);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Description";
             // 
             // GestionStage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 551);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1205, 471);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.DTP_FinStage);
+            this.Controls.Add(this.DTP_DebutStage);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.LB_NumStage);
+            this.Controls.Add(this.BTN_ClearStage);
+            this.Controls.Add(this.BTN_EditStage);
+            this.Controls.Add(this.BTN_DeleteStage);
+            this.Controls.Add(this.BTN_AjoutStage);
+            this.Controls.Add(this.BTN_Cancel);
+            this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TB_NomEnt);
+            this.Controls.Add(this.TB_Type);
+            this.Controls.Add(this.TB_Logiciel);
+            this.Controls.Add(this.TB_Plateforme);
+            this.Controls.Add(this.RTB_Description);
+            this.Controls.Add(this.DGV_GestionStage);
             this.Name = "GestionStage";
             this.Text = "GestionStage";
             this.Load += new System.EventHandler(this.GestionStage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionStage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,24 +286,28 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DataGridView DGV_GestionStage;
+        private System.Windows.Forms.RichTextBox RTB_Description;
+        private System.Windows.Forms.TextBox TB_Plateforme;
+        private System.Windows.Forms.TextBox TB_Logiciel;
+        private System.Windows.Forms.TextBox TB_Type;
+        private System.Windows.Forms.TextBox TB_NomEnt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BTN_Ok;
+        private System.Windows.Forms.Button BTN_Cancel;
+        private System.Windows.Forms.Button BTN_AjoutStage;
+        private System.Windows.Forms.Button BTN_DeleteStage;
+        private System.Windows.Forms.Button BTN_EditStage;
+        private System.Windows.Forms.Button BTN_ClearStage;
+        private System.Windows.Forms.Label LB_NumStage;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker DTP_DebutStage;
+        private System.Windows.Forms.DateTimePicker DTP_FinStage;
+        private System.Windows.Forms.Label label8;
     }
 }
