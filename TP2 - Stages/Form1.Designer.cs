@@ -80,7 +80,7 @@
             // stagesToolStripMenuItem
             // 
             this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
-            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stagesToolStripMenuItem.Text = "Stages";
             this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
             // 
@@ -194,7 +194,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipale";
-            this.Text = "Stages";
+            this.Text = "Affectation des stages";
             this.Load += new System.EventHandler(this.FormPrincipale_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
