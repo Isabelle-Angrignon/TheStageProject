@@ -106,14 +106,14 @@
             // DGV_Places
             // 
             this.DGV_Places.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Places.Location = new System.Drawing.Point(35, 95);
+            this.DGV_Places.Location = new System.Drawing.Point(35, 323);
             this.DGV_Places.Name = "DGV_Places";
-            this.DGV_Places.Size = new System.Drawing.Size(505, 249);
+            this.DGV_Places.Size = new System.Drawing.Size(505, 251);
             this.DGV_Places.TabIndex = 1;
             // 
             // BN_Assigner
             // 
-            this.BN_Assigner.Location = new System.Drawing.Point(243, 500);
+            this.BN_Assigner.Location = new System.Drawing.Point(449, 275);
             this.BN_Assigner.Name = "BN_Assigner";
             this.BN_Assigner.Size = new System.Drawing.Size(91, 23);
             this.BN_Assigner.TabIndex = 5;
@@ -123,23 +123,23 @@
             // DGV_Etudiants
             // 
             this.DGV_Etudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Etudiants.Location = new System.Drawing.Point(35, 387);
+            this.DGV_Etudiants.Location = new System.Drawing.Point(35, 94);
             this.DGV_Etudiants.Name = "DGV_Etudiants";
-            this.DGV_Etudiants.Size = new System.Drawing.Size(194, 249);
+            this.DGV_Etudiants.Size = new System.Drawing.Size(196, 175);
             this.DGV_Etudiants.TabIndex = 6;
             // 
             // DGV_Stages
             // 
             this.DGV_Stages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Stages.Location = new System.Drawing.Point(346, 387);
+            this.DGV_Stages.Location = new System.Drawing.Point(241, 94);
             this.DGV_Stages.Name = "DGV_Stages";
-            this.DGV_Stages.Size = new System.Drawing.Size(194, 249);
+            this.DGV_Stages.Size = new System.Drawing.Size(299, 175);
             this.DGV_Stages.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 75);
+            this.label1.Location = new System.Drawing.Point(46, 303);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 8;
@@ -148,7 +148,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 371);
+            this.label2.Location = new System.Drawing.Point(46, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 9;
@@ -157,7 +157,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(362, 371);
+            this.label3.Location = new System.Drawing.Point(253, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 10;
@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 656);
+            this.ClientSize = new System.Drawing.Size(561, 595);
             this.Controls.Add(this.BN_TypeInfo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
