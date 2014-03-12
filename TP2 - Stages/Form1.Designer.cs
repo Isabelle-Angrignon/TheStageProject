@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.àProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.étudiantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entreprisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.àProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DGV_Places = new System.Windows.Forms.DataGridView();
             this.BN_Assigner = new System.Windows.Forms.Button();
             this.DGV_Etudiants = new System.Windows.Forms.DataGridView();
@@ -70,6 +70,27 @@
             this.gestionToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.gestionToolStripMenuItem.Text = "Gestion";
             // 
+            // étudiantsToolStripMenuItem
+            // 
+            this.étudiantsToolStripMenuItem.Enabled = false;
+            this.étudiantsToolStripMenuItem.Name = "étudiantsToolStripMenuItem";
+            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.étudiantsToolStripMenuItem.Text = "Étudiants";
+            // 
+            // stagesToolStripMenuItem
+            // 
+            this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
+            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.stagesToolStripMenuItem.Text = "Stages";
+            this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
+            // 
+            // entreprisesToolStripMenuItem
+            // 
+            this.entreprisesToolStripMenuItem.Enabled = false;
+            this.entreprisesToolStripMenuItem.Name = "entreprisesToolStripMenuItem";
+            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.entreprisesToolStripMenuItem.Text = "Entreprises";
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -84,25 +105,7 @@
             this.àProposToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.àProposToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.àProposToolStripMenuItem.Text = "À propos...";
-            // 
-            // étudiantsToolStripMenuItem
-            // 
-            this.étudiantsToolStripMenuItem.Name = "étudiantsToolStripMenuItem";
-            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.étudiantsToolStripMenuItem.Text = "Étudiants";
-            // 
-            // stagesToolStripMenuItem
-            // 
-            this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
-            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.stagesToolStripMenuItem.Text = "Stages";
-            this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
-            // 
-            // entreprisesToolStripMenuItem
-            // 
-            this.entreprisesToolStripMenuItem.Name = "entreprisesToolStripMenuItem";
-            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.entreprisesToolStripMenuItem.Text = "Entreprises";
+            this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
             // 
             // DGV_Places
             // 
@@ -170,8 +173,9 @@
             this.BN_TypeInfo.Name = "BN_TypeInfo";
             this.BN_TypeInfo.Size = new System.Drawing.Size(75, 23);
             this.BN_TypeInfo.TabIndex = 11;
-            this.BN_TypeInfo.Text = "Gest/Indu";
+            this.BN_TypeInfo.Text = "Gestion";
             this.BN_TypeInfo.UseVisualStyleBackColor = true;
+            this.BN_TypeInfo.Click += new System.EventHandler(this.BN_TypeInfo_Click);
             // 
             // FormPrincipale
             // 
@@ -187,9 +191,11 @@
             this.Controls.Add(this.BN_Assigner);
             this.Controls.Add(this.DGV_Places);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipale";
             this.Text = "Stages";
+            this.Load += new System.EventHandler(this.FormPrincipale_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Places)).EndInit();

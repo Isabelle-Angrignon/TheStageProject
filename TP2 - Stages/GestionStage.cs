@@ -20,7 +20,18 @@ namespace TP2___Stages
 
         private void GestionStage_Load(object sender, EventArgs e)
         {
+            this.BackColor = Properties.Settings.Default.CouleurFond;
+        }
 
+        private void BTN_Ok_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void BTN_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

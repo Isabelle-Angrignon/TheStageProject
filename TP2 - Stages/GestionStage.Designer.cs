@@ -151,6 +151,7 @@
             this.BTN_Ok.TabIndex = 13;
             this.BTN_Ok.Text = "Accepter";
             this.BTN_Ok.UseVisualStyleBackColor = true;
+            this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
             // 
             // BTN_Cancel
             // 
@@ -160,6 +161,7 @@
             this.BTN_Cancel.TabIndex = 14;
             this.BTN_Cancel.Text = "Annuler";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
+            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
             // 
             // BTN_AjoutStage
             // 
@@ -275,6 +277,7 @@
             this.Controls.Add(this.TB_Plateforme);
             this.Controls.Add(this.RTB_Description);
             this.Controls.Add(this.DGV_GestionStage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GestionStage";
             this.Text = "Gestion des stages";
             this.Load += new System.EventHandler(this.GestionStage_Load);
