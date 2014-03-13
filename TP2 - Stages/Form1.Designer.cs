@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.étudiantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.BN_TypeInfo = new System.Windows.Forms.Button();
+            this.TTIP_profil = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Places)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Etudiants)).BeginInit();
@@ -67,8 +69,8 @@
             this.stagesToolStripMenuItem,
             this.entreprisesToolStripMenuItem});
             this.gestionToolStripMenuItem.Name = "gestionToolStripMenuItem";
-            this.gestionToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.gestionToolStripMenuItem.Text = "Gestion";
+            this.gestionToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.gestionToolStripMenuItem.Text = "Gérer";
             // 
             // étudiantsToolStripMenuItem
             // 
@@ -176,6 +178,7 @@
             this.BN_TypeInfo.Text = "Gestion";
             this.BN_TypeInfo.UseVisualStyleBackColor = true;
             this.BN_TypeInfo.Click += new System.EventHandler(this.BN_TypeInfo_Click);
+            this.BN_TypeInfo.MouseHover += new System.EventHandler(this.BN_TypeInfo_MouseHover);
             // 
             // FormPrincipale
             // 
@@ -223,6 +226,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BN_TypeInfo;
+        private System.Windows.Forms.ToolTip TTIP_profil;
     }
 }
 

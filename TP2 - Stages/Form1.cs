@@ -52,6 +52,7 @@ namespace TP2___Stages
             Connect();
             Properties.Settings.Default.CouleurFond = Color.LightBlue;
             MettreAJour();
+            TTIP_profil.SetToolTip(BN_TypeInfo, "Changer de profil");
         }
         private void MettreAJour()
         {
@@ -79,6 +80,11 @@ namespace TP2___Stages
                 MessageBox.Show(conn.State.ToString());
             }
             catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
+        }
+
+        private void BN_TypeInfo_MouseHover(object sender, EventArgs e)
+        {
+            TTIP_profil.Active = true;
         }
     }
 }
