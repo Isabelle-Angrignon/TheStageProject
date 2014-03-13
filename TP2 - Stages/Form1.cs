@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.DataAccess.Client;
 
 namespace TP2___Stages
 {
     public partial class FormPrincipale : Form
     {
+        private OracleConnection conn = new OracleConnection();
+        private DataSet mainDataSet = new DataSet();
         public FormPrincipale()
         {
             InitializeComponent();
@@ -20,9 +23,10 @@ namespace TP2___Stages
         private void stagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GestionStage GestionS = new GestionStage();
+            GestionS.conn = conn;
             if (GestionS.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                Refresh();
+                MettreAJour();
             }
         }
 
@@ -40,15 +44,16 @@ namespace TP2___Stages
                 Properties.Settings.Default.CouleurFond = Color.LightBlue;
             }
             BN_TypeInfo.Text = Nom;
-            Refresh();
+            MettreAJour();
         }
 
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
+            Connect();
             Properties.Settings.Default.CouleurFond = Color.LightBlue;
-            Refresh();
+            MettreAJour();
         }
-        private void Refresh()
+        private void MettreAJour()
         {
             this.BackColor = Properties.Settings.Default.CouleurFond;
         }
@@ -57,6 +62,23 @@ namespace TP2___Stages
         {
             APropos form = new APropos();
             form.ShowDialog();
+        }
+        private void Connect()
+        {
+            try
+            {
+                string Dsource = "(DESCRIPTION="
+                + "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)"
+                + "(HOST=205.237.244.251)(PORT=1521)))"
+                + "(CONNECT_DATA=(SERVICE_NAME=ORCL)))";
+
+                String ChaineConnexion = "Data Source=" + Dsource
+                + ";User Id = angrigno; Password =  oracle2";
+                conn.ConnectionString = ChaineConnexion;
+                conn.Open();
+                MessageBox.Show(conn.State.ToString());
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
         }
     }
 }

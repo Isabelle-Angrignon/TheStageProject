@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.DataAccess.Client;
 
 namespace TP2___Stages
 {
     public partial class GestionStage : Form
     {
+        private OracleConnection conn = new OracleConnection();
+        private DataSet mainDataSet = new DataSet();
         int NumStageDefaut = 0;
         public GestionStage()
         {
