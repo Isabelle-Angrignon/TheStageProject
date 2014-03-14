@@ -193,23 +193,30 @@ namespace TP2___Stages
 
         private void Assigner()
         {
-            OracleCommand oraliste = new OracleCommand(Package, conn);
-            oraliste.CommandText = Package + ".ASSIGNER";
-            oraliste.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                OracleCommand oraliste = new OracleCommand(Package, conn);
+                oraliste.CommandText = Package + ".ASSIGNER";
+                oraliste.CommandType = CommandType.StoredProcedure;
 
-            OracleParameter OrapamNumAd = new OracleParameter("PSTAGIAIRE", OracleDbType.Int32);
-            OracleParameter OrapamNumStage = new OracleParameter("PSTAGE", OracleDbType.Int32);
+                OracleParameter OrapamNumAd = new OracleParameter("PSTAGIAIRE", OracleDbType.Int32);
+                OracleParameter OrapamNumStage = new OracleParameter("PSTAGE", OracleDbType.Int32);
 
-            OrapamNumAd.Value = DGV_Etudiants.SelectedRows[0].Cells[0].Value.ToString();
-            OrapamNumStage.Value = DGV_Stages.SelectedRows[0].Cells[0].Value.ToString();
+                OrapamNumAd.Value = DGV_Etudiants.SelectedRows[0].Cells[0].Value.ToString();
+                OrapamNumStage.Value = DGV_Stages.SelectedRows[0].Cells[0].Value.ToString();
 
-            OrapamNumAd.Direction = ParameterDirection.Input;
-            OrapamNumStage.Direction = ParameterDirection.Input;
+                OrapamNumAd.Direction = ParameterDirection.Input;
+                OrapamNumStage.Direction = ParameterDirection.Input;
 
-            oraliste.Parameters.Add(OrapamNumAd);
-            oraliste.Parameters.Add(OrapamNumStage);
+                oraliste.Parameters.Add(OrapamNumAd);
+                oraliste.Parameters.Add(OrapamNumStage);
 
-            UpdateDGV();
+                oraliste.ExecuteNonQuery();
+
+                UpdateDGV();
+            }
+
+            catch (OracleException ex) { MessageBox.Show(ex.Message.ToString()); }
         }
 
         private void DGV_Places_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
