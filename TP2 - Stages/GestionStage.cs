@@ -77,5 +77,86 @@ namespace TP2___Stages
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void DGV_GestionStage_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LB_NumStage.Text = DGV_GestionStage.SelectedRows[0].Cells[0].Value.ToString();
+            TB_Plateforme.Text = DGV_GestionStage.SelectedRows[0].Cells[1].Value.ToString();
+            TB_Logiciel.Text = DGV_GestionStage.SelectedRows[0].Cells[2].Value.ToString();
+            TB_Type.Text = DGV_GestionStage.SelectedRows[0].Cells[3].Value.ToString();
+            TB_NumEnt.Text = DGV_GestionStage.SelectedRows[0].Cells[4].Value.ToString();
+            DTP_DebutStage.Value = DateTime.Parse( DGV_GestionStage.SelectedRows[0].Cells[6].Value.ToString());
+            DTP_FinStage.Value = DateTime.Parse(DGV_GestionStage.SelectedRows[0].Cells[7].Value.ToString());
+            RTB_Description.Text = DGV_GestionStage.SelectedRows[0].Cells[5].Value.ToString();
+        }
     }
 }

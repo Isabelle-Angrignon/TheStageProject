@@ -33,7 +33,7 @@
             this.TB_Plateforme = new System.Windows.Forms.TextBox();
             this.TB_Logiciel = new System.Windows.Forms.TextBox();
             this.TB_Type = new System.Windows.Forms.TextBox();
-            this.TB_NomEnt = new System.Windows.Forms.TextBox();
+            this.TB_NumEnt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,12 +63,14 @@
             this.DGV_GestionStage.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_GestionStage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_GestionStage.Location = new System.Drawing.Point(463, 12);
+            this.DGV_GestionStage.MultiSelect = false;
             this.DGV_GestionStage.Name = "DGV_GestionStage";
             this.DGV_GestionStage.ReadOnly = true;
             this.DGV_GestionStage.RowHeadersWidth = 20;
             this.DGV_GestionStage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_GestionStage.Size = new System.Drawing.Size(708, 418);
             this.DGV_GestionStage.TabIndex = 0;
+            this.DGV_GestionStage.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_GestionStage_CellClick);
             // 
             // RTB_Description
             // 
@@ -99,12 +101,12 @@
             this.TB_Type.Size = new System.Drawing.Size(100, 20);
             this.TB_Type.TabIndex = 5;
             // 
-            // TB_NomEnt
+            // TB_NumEnt
             // 
-            this.TB_NomEnt.Location = new System.Drawing.Point(136, 159);
-            this.TB_NomEnt.Name = "TB_NomEnt";
-            this.TB_NomEnt.Size = new System.Drawing.Size(100, 20);
-            this.TB_NomEnt.TabIndex = 6;
+            this.TB_NumEnt.Location = new System.Drawing.Point(136, 159);
+            this.TB_NumEnt.Name = "TB_NumEnt";
+            this.TB_NumEnt.Size = new System.Drawing.Size(100, 20);
+            this.TB_NumEnt.TabIndex = 6;
             // 
             // label1
             // 
@@ -280,7 +282,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TB_NomEnt);
+            this.Controls.Add(this.TB_NumEnt);
             this.Controls.Add(this.TB_Type);
             this.Controls.Add(this.TB_Logiciel);
             this.Controls.Add(this.TB_Plateforme);
@@ -303,7 +305,7 @@
         private System.Windows.Forms.TextBox TB_Plateforme;
         private System.Windows.Forms.TextBox TB_Logiciel;
         private System.Windows.Forms.TextBox TB_Type;
-        private System.Windows.Forms.TextBox TB_NomEnt;
+        private System.Windows.Forms.TextBox TB_NumEnt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
