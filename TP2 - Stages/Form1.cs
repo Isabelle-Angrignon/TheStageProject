@@ -253,6 +253,8 @@ namespace TP2___Stages
             OrapamNumAd.Direction = ParameterDirection.Input;
             oraliste.Parameters.Add(OrapamNumAd);
 
+            oraliste.ExecuteNonQuery();
+
             UpdateDGV();
         }
     }
