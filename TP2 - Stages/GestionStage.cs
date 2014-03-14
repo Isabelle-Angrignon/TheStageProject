@@ -38,10 +38,12 @@ namespace TP2___Stages
         {
             this.Close();
         }
+
         private void MiseAJour()
         {
             RemplirDGVStage();
         }
+
         private void RemplirDGVStage()
         {
             OracleCommand oraliste = new OracleCommand(PackageStage, conn);
@@ -64,6 +66,7 @@ namespace TP2___Stages
 
             BindingSource maSource = new BindingSource(mainDataSet, "Liste_stage");
             DGV_GestionStage.DataSource = maSource;
+
         }
 
         private void BTN_AjoutStage_Click(object sender, EventArgs e)
@@ -91,9 +94,9 @@ namespace TP2___Stages
                 oParamPlate.Value = TB_Plateforme.Text;
                 oParamLogi.Value = TB_Logiciel.Text;
                 oParamType.Value = TB_Type.Text;
-                oParamDebut.Value = DTP_DebutStage.Value;
-                oParamFin.Value = DTP_FinStage.Value;
-                oParamEnt.Value = TB_NomEnt.Text;
+                oParamDebut.Value = DTP_DebutStage.Value.ToShortDateString();
+                oParamFin.Value = DTP_FinStage.Value.ToShortDateString();
+                oParamEnt.Value = TB_NumEnt.Text;
 
                 //modif/////
                 OracleCommand orComm = new OracleCommand(PackageStage, conn);
