@@ -66,7 +66,7 @@ namespace TP2___Stages
 
             BindingSource maSource = new BindingSource(mainDataSet, "Liste_stage");
             DGV_GestionStage.DataSource = maSource;
-
+            RemplirTB();
         }
 
         private void BTN_AjoutStage_Click(object sender, EventArgs e)
@@ -191,14 +191,35 @@ namespace TP2___Stages
 
         private void DGV_GestionStage_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            RemplirTB();
+        }
+        private void RemplirTB()
+        {
             LB_NumStage.Text = DGV_GestionStage.SelectedRows[0].Cells[0].Value.ToString();
             TB_Plateforme.Text = DGV_GestionStage.SelectedRows[0].Cells[1].Value.ToString();
             TB_Logiciel.Text = DGV_GestionStage.SelectedRows[0].Cells[2].Value.ToString();
             TB_Type.Text = DGV_GestionStage.SelectedRows[0].Cells[3].Value.ToString();
             TB_NumEnt.Text = DGV_GestionStage.SelectedRows[0].Cells[4].Value.ToString();
-            DTP_DebutStage.Value = DateTime.Parse( DGV_GestionStage.SelectedRows[0].Cells[6].Value.ToString());
+            DTP_DebutStage.Value = DateTime.Parse(DGV_GestionStage.SelectedRows[0].Cells[6].Value.ToString());
             DTP_FinStage.Value = DateTime.Parse(DGV_GestionStage.SelectedRows[0].Cells[7].Value.ToString());
             RTB_Description.Text = DGV_GestionStage.SelectedRows[0].Cells[5].Value.ToString();
+        }
+
+        private void BTN_ClearStage_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void Clear()
+        {
+            LB_NumStage.Text = "";
+            TB_Plateforme.Text = "";
+            TB_Logiciel.Text = "";
+            TB_Type.Text = "";
+            TB_NumEnt.Text = "";
+            DTP_DebutStage.Value = DateTime.Now;
+            DTP_FinStage.Value = DateTime.Now;
+            RTB_Description.Text = "";
         }
     }
 }
