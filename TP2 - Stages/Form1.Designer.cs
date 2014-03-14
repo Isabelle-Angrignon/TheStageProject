@@ -119,9 +119,11 @@
             this.DGV_Places.Location = new System.Drawing.Point(30, 323);
             this.DGV_Places.MultiSelect = false;
             this.DGV_Places.Name = "DGV_Places";
+            this.DGV_Places.ReadOnly = true;
             this.DGV_Places.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Places.Size = new System.Drawing.Size(762, 251);
             this.DGV_Places.TabIndex = 1;
+            this.DGV_Places.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Places_CellMouseDown);
             // 
             // BN_Assigner
             // 
@@ -143,11 +145,9 @@
             this.DGV_Etudiants.Location = new System.Drawing.Point(30, 94);
             this.DGV_Etudiants.MultiSelect = false;
             this.DGV_Etudiants.Name = "DGV_Etudiants";
-
             this.DGV_Etudiants.ReadOnly = true;
             this.DGV_Etudiants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Etudiants.Size = new System.Drawing.Size(339, 175);
-
             this.DGV_Etudiants.TabIndex = 6;
             // 
             // DGV_Stages
@@ -157,13 +157,12 @@
             this.DGV_Stages.AllowUserToResizeColumns = false;
             this.DGV_Stages.AllowUserToResizeRows = false;
             this.DGV_Stages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
-            this.DGV_Stages.MultiSelect = false;
             this.DGV_Stages.Location = new System.Drawing.Point(375, 94);
+            this.DGV_Stages.MultiSelect = false;
             this.DGV_Stages.Name = "DGV_Stages";
+            this.DGV_Stages.ReadOnly = true;
             this.DGV_Stages.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Stages.Size = new System.Drawing.Size(417, 175);
-
             this.DGV_Stages.TabIndex = 7;
             // 
             // label1
