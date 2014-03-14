@@ -56,9 +56,16 @@
             // 
             // DGV_GestionStage
             // 
+            this.DGV_GestionStage.AllowUserToAddRows = false;
+            this.DGV_GestionStage.AllowUserToDeleteRows = false;
+            this.DGV_GestionStage.AllowUserToResizeRows = false;
+            this.DGV_GestionStage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_GestionStage.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_GestionStage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_GestionStage.Location = new System.Drawing.Point(463, 12);
             this.DGV_GestionStage.Name = "DGV_GestionStage";
+            this.DGV_GestionStage.ReadOnly = true;
+            this.DGV_GestionStage.RowHeadersWidth = 20;
             this.DGV_GestionStage.Size = new System.Drawing.Size(708, 418);
             this.DGV_GestionStage.TabIndex = 0;
             // 
@@ -171,6 +178,7 @@
             this.BTN_AjoutStage.Size = new System.Drawing.Size(45, 41);
             this.BTN_AjoutStage.TabIndex = 15;
             this.BTN_AjoutStage.UseVisualStyleBackColor = true;
+            this.BTN_AjoutStage.Click += new System.EventHandler(this.BTN_AjoutStage_Click);
             // 
             // BTN_DeleteStage
             // 

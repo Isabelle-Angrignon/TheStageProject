@@ -69,5 +69,13 @@ namespace TP2___Stages
 
             DGV_GestionStage.DataSource = maSource;
         }
+
+        private void BTN_AjoutStage_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
     }
 }
