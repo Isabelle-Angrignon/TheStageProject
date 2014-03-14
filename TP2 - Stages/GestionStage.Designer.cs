@@ -209,6 +209,7 @@
             this.BTN_ClearStage.Size = new System.Drawing.Size(45, 41);
             this.BTN_ClearStage.TabIndex = 18;
             this.BTN_ClearStage.UseVisualStyleBackColor = true;
+            this.BTN_ClearStage.Click += new System.EventHandler(this.BTN_ClearStage_Click);
             // 
             // LB_NumStage
             // 
