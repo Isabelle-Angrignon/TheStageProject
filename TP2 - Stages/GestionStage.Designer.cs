@@ -66,6 +66,7 @@
             this.DGV_GestionStage.Name = "DGV_GestionStage";
             this.DGV_GestionStage.ReadOnly = true;
             this.DGV_GestionStage.RowHeadersWidth = 20;
+            this.DGV_GestionStage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_GestionStage.Size = new System.Drawing.Size(708, 418);
             this.DGV_GestionStage.TabIndex = 0;
             // 
@@ -108,7 +109,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 56);
+            this.label1.Location = new System.Drawing.Point(24, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 7;
@@ -117,7 +118,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 84);
+            this.label3.Location = new System.Drawing.Point(24, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 9;
@@ -126,7 +127,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 110);
+            this.label4.Location = new System.Drawing.Point(24, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 10;
@@ -135,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 136);
+            this.label5.Location = new System.Drawing.Point(24, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 11;
@@ -144,11 +145,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 162);
+            this.label6.Location = new System.Drawing.Point(24, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 13);
+            this.label6.Size = new System.Drawing.Size(107, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Nom de l\'entreprise :";
+            this.label6.Text = "Numero d\'entreprise :";
             // 
             // BTN_Ok
             // 
@@ -219,7 +220,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 196);
+            this.label2.Location = new System.Drawing.Point(24, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 20;
@@ -228,7 +229,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 224);
+            this.label7.Location = new System.Drawing.Point(24, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 21;
