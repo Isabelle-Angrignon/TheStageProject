@@ -191,6 +191,7 @@
             this.BTN_DeleteStage.Size = new System.Drawing.Size(45, 41);
             this.BTN_DeleteStage.TabIndex = 16;
             this.BTN_DeleteStage.UseVisualStyleBackColor = true;
+            this.BTN_DeleteStage.Click += new System.EventHandler(this.BTN_DeleteStage_Click);
             // 
             // BTN_EditStage
             // 

@@ -94,8 +94,8 @@ namespace TP2___Stages
                 oParamPlate.Value = TB_Plateforme.Text;
                 oParamLogi.Value = TB_Logiciel.Text;
                 oParamType.Value = TB_Type.Text;
-                oParamDebut.Value = DateTime.Parse(DTP_DebutStage.Value.ToString());
-                oParamFin.Value = DateTime.Parse(DTP_FinStage.Value.ToString());
+                oParamDebut.Value = DTP_DebutStage.Value;
+                oParamFin.Value = DTP_FinStage.Value;
                 oParamEnt.Value = TB_NumEnt.Text;
 
                 //modif/////
@@ -115,25 +115,30 @@ namespace TP2___Stages
                 RemplirDGVStage();
             }
             catch (OracleException ex) { MessageBox.Show(ex.Message); } 
-
-
-
         }
 
+        private void BTN_DeleteStage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Voulez-vous vraiment supprimer cet enregistrement?", "Attention", MessageBoxButtons.YesNo) ==
+                    System.Windows.Forms.DialogResult.Yes)
+                {
+                    OracleParameter oParamNumStage = new OracleParameter("PNUM", OracleDbType.Int32, 5);
+                    oParamNumStage.Direction = ParameterDirection.Input;
+                    oParamNumStage.Value = LB_NumStage.Text;
 
+                    OracleCommand orComm = new OracleCommand(PackageStage, conn);
+                    orComm.CommandText = PackageStage + ".SUPPRIMER";
+                    orComm.CommandType = CommandType.StoredProcedure;
+                    orComm.Parameters.Add(oParamNumStage);
+                    orComm.ExecuteNonQuery();
 
-
-
-
-
-
-
-
-
-
-
-
-
+                    RemplirDGVStage();
+                }
+            }
+            catch (OracleException ex) { MessageBox.Show(ex.Message); }
+        }
 
 
 
@@ -221,5 +226,7 @@ namespace TP2___Stages
             DTP_FinStage.Value = DateTime.Now;
             RTB_Description.Text = "";
         }
+
+        
     }
 }
