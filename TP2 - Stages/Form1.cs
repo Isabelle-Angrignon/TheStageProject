@@ -216,7 +216,7 @@ namespace TP2___Stages
                 UpdateDGV();
             }
 
-            catch (OracleException ex) { MessageBox.Show(ex.Message.ToString()); }
+            catch (Exception ex) { MessageBox.Show("Il n'y a plus d'étudiant à assigner"); }
         }
 
         private void DGV_Places_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
