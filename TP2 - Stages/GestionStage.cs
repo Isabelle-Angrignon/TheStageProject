@@ -94,8 +94,8 @@ namespace TP2___Stages
                 oParamPlate.Value = TB_Plateforme.Text;
                 oParamLogi.Value = TB_Logiciel.Text;
                 oParamType.Value = TB_Type.Text;
-                oParamDebut.Value = DTP_DebutStage.Value.ToShortDateString();
-                oParamFin.Value = DTP_FinStage.Value.ToShortDateString();
+                oParamDebut.Value = DateTime.Parse(DTP_DebutStage.Value.ToString());
+                oParamFin.Value = DateTime.Parse(DTP_FinStage.Value.ToString());
                 oParamEnt.Value = TB_NumEnt.Text;
 
                 //modif/////
