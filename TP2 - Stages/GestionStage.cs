@@ -48,13 +48,10 @@ namespace TP2___Stages
             oraliste.CommandText = PackageStage + ".LISTER";
             oraliste.CommandType = CommandType.StoredProcedure;
 
-
             OracleParameter OrapameResultat = new OracleParameter("LISTE",
-           OracleDbType.RefCursor);
+            OracleDbType.RefCursor);
             OrapameResultat.Direction = ParameterDirection.ReturnValue;
             oraliste.Parameters.Add(OrapameResultat);
-
-            
 
             OracleDataAdapter Oraliste = new OracleDataAdapter(oraliste);
 
@@ -66,13 +63,55 @@ namespace TP2___Stages
             Oraliste.Dispose();
 
             BindingSource maSource = new BindingSource(mainDataSet, "Liste_stage");
-
             DGV_GestionStage.DataSource = maSource;
         }
 
         private void BTN_AjoutStage_Click(object sender, EventArgs e)
-        {
+        { 
+            try
+            {
+                OracleParameter oParamDescr = new OracleParameter("PDESCR", OracleDbType.Varchar2, 200);
+                OracleParameter oParamPlate = new OracleParameter("PPLATEFORME", OracleDbType.Varchar2, 20);
+                OracleParameter oParamLogi = new OracleParameter("PLOGICIEL", OracleDbType.Varchar2, 20);
+                OracleParameter oParamType = new OracleParameter("PTYPE", OracleDbType.Varchar2, 20);
+                OracleParameter oParamDebut = new OracleParameter("PDEBUT", OracleDbType.Date);
+                OracleParameter oParamFin = new OracleParameter("PFIN", OracleDbType.Date);
+                OracleParameter oParamEnt = new OracleParameter("PENT", OracleDbType.Int32, 3);
 
+                //ajout
+                oParamDescr.Direction = ParameterDirection.Input;
+                oParamPlate.Direction = ParameterDirection.Input;
+                oParamLogi.Direction = ParameterDirection.Input;
+                oParamType.Direction = ParameterDirection.Input;
+                oParamDebut.Direction = ParameterDirection.Input;
+                oParamFin.Direction = ParameterDirection.Input;
+                oParamEnt.Direction = ParameterDirection.Input;
+
+                oParamDescr.Value = RTB_Description.Text;
+                oParamPlate.Value = TB_Plateforme.Text;
+                oParamLogi.Value = TB_Logiciel.Text;
+                oParamType.Value = TB_Type.Text;
+                oParamDebut.Value = DTP_DebutStage.Value;
+                oParamFin.Value = DTP_FinStage.Value;
+                oParamEnt.Value = TB_NomEnt.Text;
+
+                //modif/////
+                OracleCommand orComm = new OracleCommand(PackageStage, conn);
+                orComm.CommandText = PackageStage + ".INSERER";
+                orComm.CommandType = CommandType.StoredProcedure;
+
+                orComm.Parameters.Add(oParamDescr);
+                orComm.Parameters.Add(oParamPlate);
+                orComm.Parameters.Add(oParamLogi);
+                orComm.Parameters.Add(oParamType);
+                orComm.Parameters.Add(oParamDebut);
+                orComm.Parameters.Add(oParamFin);
+                orComm.Parameters.Add(oParamEnt);
+                orComm.ExecuteNonQuery();
+
+                RemplirDGVStage();
+            }
+            catch (OracleException ex) { MessageBox.Show(ex.Message); } 
 
 
 
