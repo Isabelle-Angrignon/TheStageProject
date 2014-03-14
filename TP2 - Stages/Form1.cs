@@ -184,5 +184,10 @@ namespace TP2___Stages
             BindingSource maSource = new BindingSource(mainDataSet, "Liste_Places");
             DGV_Places.DataSource = maSource;
         }
+
+        private void BN_Assigner_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
