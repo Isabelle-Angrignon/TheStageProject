@@ -105,15 +105,21 @@
             // 
             this.àProposToolStripMenuItem.Name = "àProposToolStripMenuItem";
             this.àProposToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.àProposToolStripMenuItem.Text = "À propos...";
             this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
             // 
             // DGV_Places
             // 
+            this.DGV_Places.AllowUserToAddRows = false;
+            this.DGV_Places.AllowUserToDeleteRows = false;
+            this.DGV_Places.AllowUserToResizeColumns = false;
+            this.DGV_Places.AllowUserToResizeRows = false;
             this.DGV_Places.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Places.Location = new System.Drawing.Point(30, 323);
+            this.DGV_Places.MultiSelect = false;
             this.DGV_Places.Name = "DGV_Places";
+            this.DGV_Places.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Places.Size = new System.Drawing.Size(505, 251);
             this.DGV_Places.TabIndex = 1;
             // 
@@ -128,17 +134,30 @@
             // 
             // DGV_Etudiants
             // 
+            this.DGV_Etudiants.AllowUserToAddRows = false;
+            this.DGV_Etudiants.AllowUserToDeleteRows = false;
+            this.DGV_Etudiants.AllowUserToResizeColumns = false;
+            this.DGV_Etudiants.AllowUserToResizeRows = false;
             this.DGV_Etudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Etudiants.Location = new System.Drawing.Point(30, 94);
+            this.DGV_Etudiants.MultiSelect = false;
             this.DGV_Etudiants.Name = "DGV_Etudiants";
+            this.DGV_Etudiants.ReadOnly = true;
+            this.DGV_Etudiants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Etudiants.Size = new System.Drawing.Size(196, 175);
             this.DGV_Etudiants.TabIndex = 6;
             // 
             // DGV_Stages
             // 
+            this.DGV_Stages.AllowUserToAddRows = false;
+            this.DGV_Stages.AllowUserToDeleteRows = false;
+            this.DGV_Stages.AllowUserToResizeColumns = false;
+            this.DGV_Stages.AllowUserToResizeRows = false;
             this.DGV_Stages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Stages.Location = new System.Drawing.Point(236, 94);
+            this.DGV_Stages.MultiSelect = false;
             this.DGV_Stages.Name = "DGV_Stages";
+            this.DGV_Stages.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Stages.Size = new System.Drawing.Size(299, 175);
             this.DGV_Stages.TabIndex = 7;
             // 
