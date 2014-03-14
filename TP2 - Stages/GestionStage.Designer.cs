@@ -201,6 +201,7 @@
             this.BTN_EditStage.Size = new System.Drawing.Size(45, 41);
             this.BTN_EditStage.TabIndex = 17;
             this.BTN_EditStage.UseVisualStyleBackColor = true;
+            this.BTN_EditStage.Click += new System.EventHandler(this.BTN_EditStage_Click);
             // 
             // BTN_ClearStage
             // 

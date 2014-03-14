@@ -94,8 +94,11 @@ namespace TP2___Stages
                 oParamPlate.Value = TB_Plateforme.Text;
                 oParamLogi.Value = TB_Logiciel.Text;
                 oParamType.Value = TB_Type.Text;
-                oParamDebut.Value = DTP_DebutStage.Value;
-                oParamFin.Value = DTP_FinStage.Value;
+                //Pour ne garderque la date, sans l'heure
+                string DateDebut = DTP_DebutStage.Value.ToShortDateString();
+                string DateFin = DTP_FinStage.Value.ToShortDateString();
+                oParamDebut.Value = DateTime.Parse(DateDebut);
+                oParamFin.Value = DateTime.Parse(DateFin);
                 oParamEnt.Value = TB_NumEnt.Text;
 
                 //modif/////
@@ -115,6 +118,61 @@ namespace TP2___Stages
                 RemplirDGVStage();
             }
             catch (OracleException ex) { MessageBox.Show(ex.Message); } 
+        }
+
+        private void BTN_EditStage_Click(object sender, EventArgs e)
+        {  
+            try
+            {
+                OracleParameter oParamNum = new OracleParameter("PNUM", OracleDbType.Int32, 5);
+                OracleParameter oParamDescr = new OracleParameter("PDESCR", OracleDbType.Varchar2, 200);
+                OracleParameter oParamPlate = new OracleParameter("PPLATEFORME", OracleDbType.Varchar2, 20);
+                OracleParameter oParamLogi = new OracleParameter("PLOGICIEL", OracleDbType.Varchar2, 20);
+                OracleParameter oParamType = new OracleParameter("PTYPE", OracleDbType.Varchar2, 20);
+                OracleParameter oParamDebut = new OracleParameter("PDEBUT", OracleDbType.Date);
+                OracleParameter oParamFin = new OracleParameter("PFIN", OracleDbType.Date);
+                OracleParameter oParamEnt = new OracleParameter("PENT", OracleDbType.Int32, 3);
+
+                //ajout
+                oParamNum.Direction = ParameterDirection.Input;
+                oParamDescr.Direction = ParameterDirection.Input;
+                oParamPlate.Direction = ParameterDirection.Input;
+                oParamLogi.Direction = ParameterDirection.Input;
+                oParamType.Direction = ParameterDirection.Input;
+                oParamDebut.Direction = ParameterDirection.Input;
+                oParamFin.Direction = ParameterDirection.Input;
+                oParamEnt.Direction = ParameterDirection.Input;
+
+                oParamNum.Value = LB_NumStage.Text;
+                oParamDescr.Value = RTB_Description.Text;
+                oParamPlate.Value = TB_Plateforme.Text;
+                oParamLogi.Value = TB_Logiciel.Text;
+                oParamType.Value = TB_Type.Text;
+                //Pour ne garderque la date, sans l'heure
+                string DateDebut = DTP_DebutStage.Value.ToShortDateString();
+                string DateFin = DTP_FinStage.Value.ToShortDateString();
+                oParamDebut.Value = DateTime.Parse(DateDebut);
+                oParamFin.Value = DateTime.Parse(DateFin);
+                oParamEnt.Value = TB_NumEnt.Text;
+
+                //modif/////
+                OracleCommand orComm = new OracleCommand(PackageStage, conn);
+                orComm.CommandText = PackageStage + ".MODIFIER";
+                orComm.CommandType = CommandType.StoredProcedure;
+
+                orComm.Parameters.Add(oParamNum); 
+                orComm.Parameters.Add(oParamDescr);
+                orComm.Parameters.Add(oParamPlate);
+                orComm.Parameters.Add(oParamLogi);
+                orComm.Parameters.Add(oParamType);
+                orComm.Parameters.Add(oParamDebut);
+                orComm.Parameters.Add(oParamFin);
+                orComm.Parameters.Add(oParamEnt);
+                orComm.ExecuteNonQuery();
+
+                RemplirDGVStage();
+            }
+            catch (OracleException ex) { MessageBox.Show(ex.Message); }            
         }
 
         private void BTN_DeleteStage_Click(object sender, EventArgs e)
@@ -140,60 +198,6 @@ namespace TP2___Stages
             catch (OracleException ex) { MessageBox.Show(ex.Message); }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void DGV_GestionStage_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             RemplirTB();
@@ -205,9 +209,9 @@ namespace TP2___Stages
             TB_Logiciel.Text = DGV_GestionStage.SelectedRows[0].Cells[2].Value.ToString();
             TB_Type.Text = DGV_GestionStage.SelectedRows[0].Cells[3].Value.ToString();
             TB_NumEnt.Text = DGV_GestionStage.SelectedRows[0].Cells[4].Value.ToString();
-            DTP_DebutStage.Value = DateTime.Parse(DGV_GestionStage.SelectedRows[0].Cells[6].Value.ToString());
-            DTP_FinStage.Value = DateTime.Parse(DGV_GestionStage.SelectedRows[0].Cells[7].Value.ToString());
-            RTB_Description.Text = DGV_GestionStage.SelectedRows[0].Cells[5].Value.ToString();
+            DTP_DebutStage.Value = DateTime.Parse(DGV_GestionStage.SelectedRows[0].Cells[7].Value.ToString());
+            DTP_FinStage.Value = DateTime.Parse(DGV_GestionStage.SelectedRows[0].Cells[8].Value.ToString());
+            RTB_Description.Text = DGV_GestionStage.SelectedRows[0].Cells[6].Value.ToString();
         }
 
         private void BTN_ClearStage_Click(object sender, EventArgs e)
@@ -225,8 +229,6 @@ namespace TP2___Stages
             DTP_DebutStage.Value = DateTime.Now;
             DTP_FinStage.Value = DateTime.Now;
             RTB_Description.Text = "";
-        }
-
-        
+        }  
     }
 }
