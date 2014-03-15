@@ -198,15 +198,16 @@ namespace TP2___Stages
             switch (Ex.Number)
             {
                 case 02290:
-                    // au lieu d'afficher violation de clé étrangère , on affiche ceci:
-                    MessageBox.Show("Entrée invalide");
-                    break;
-                case 02292:
-                    MessageBox.Show("Le joueur choisi est inscrit dans au moins un match: " +
-                        "on ne peut le suprimer.");
-                    break;
+                    //check not in
+                    MessageBox.Show("Spécialisation invalide");
+                    break;                
                 case 01400:
-                    MessageBox.Show("Il y a des champs vides");
+                    // Pour check not null
+                    MessageBox.Show("Il y a des champs obligatoires vides.");
+                    break;
+                case 01438:
+                    // Si le number est plus long que spécifié
+                    MessageBox.Show("Le numéro d'admision est trop long");
                     break;
                 default: MessageBox.Show(Ex.Message.ToString());
                     break;

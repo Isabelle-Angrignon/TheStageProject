@@ -58,7 +58,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(871, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(802, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,21 +75,21 @@
             // étudiantsToolStripMenuItem
             // 
             this.étudiantsToolStripMenuItem.Name = "étudiantsToolStripMenuItem";
-            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.étudiantsToolStripMenuItem.Text = "Étudiants";
+            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.étudiantsToolStripMenuItem.Text = "Stagiaires";
             this.étudiantsToolStripMenuItem.Click += new System.EventHandler(this.étudiantsToolStripMenuItem_Click);
             // 
             // stagesToolStripMenuItem
             // 
             this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
-            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.stagesToolStripMenuItem.Text = "Stages";
             this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
             // 
             // entreprisesToolStripMenuItem
             // 
             this.entreprisesToolStripMenuItem.Name = "entreprisesToolStripMenuItem";
-            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.entreprisesToolStripMenuItem.Text = "Entreprises";
             this.entreprisesToolStripMenuItem.Click += new System.EventHandler(this.entreprisesToolStripMenuItem_Click);
             // 
@@ -129,7 +129,7 @@
             // 
             // BN_Assigner
             // 
-            this.BN_Assigner.Location = new System.Drawing.Point(768, 275);
+            this.BN_Assigner.Location = new System.Drawing.Point(701, 275);
             this.BN_Assigner.Name = "BN_Assigner";
             this.BN_Assigner.Size = new System.Drawing.Size(91, 23);
             this.BN_Assigner.TabIndex = 3;
@@ -151,7 +151,7 @@
             this.DGV_Etudiants.Name = "DGV_Etudiants";
             this.DGV_Etudiants.ReadOnly = true;
             this.DGV_Etudiants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Etudiants.Size = new System.Drawing.Size(339, 175);
+            this.DGV_Etudiants.Size = new System.Drawing.Size(315, 175);
             this.DGV_Etudiants.TabIndex = 1;
             // 
             // DGV_Stages
@@ -163,13 +163,14 @@
             this.DGV_Stages.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGV_Stages.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Stages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Stages.Location = new System.Drawing.Point(375, 94);
+            this.DGV_Stages.Location = new System.Drawing.Point(351, 94);
             this.DGV_Stages.MultiSelect = false;
             this.DGV_Stages.Name = "DGV_Stages";
             this.DGV_Stages.ReadOnly = true;
             this.DGV_Stages.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Stages.Size = new System.Drawing.Size(484, 175);
+            this.DGV_Stages.Size = new System.Drawing.Size(441, 175);
             this.DGV_Stages.TabIndex = 2;
+            this.DGV_Stages.Paint += new System.Windows.Forms.PaintEventHandler(this.DGV_Stages_Paint);
             // 
             // label1
             // 
@@ -185,14 +186,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(41, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Étudiants";
+            this.label2.Text = "Stagiaires";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(390, 78);
+            this.label3.Location = new System.Drawing.Point(361, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 10;
@@ -213,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 595);
+            this.ClientSize = new System.Drawing.Size(802, 595);
             this.Controls.Add(this.BN_TypeInfo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

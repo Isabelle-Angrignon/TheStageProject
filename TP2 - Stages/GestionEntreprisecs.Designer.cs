@@ -50,6 +50,7 @@
             this.TB_Cote = new System.Windows.Forms.TextBox();
             this.LB_NumEnt = new System.Windows.Forms.Label();
             this.BTN_Ok = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionEnt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,9 +128,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 24;
-            this.label2.Text = "Nom :";
+            this.label2.Text = "* Nom :";
             // 
             // label3
             // 
@@ -154,9 +155,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 205);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 27;
-            this.label5.Text = "Nom du contact :";
+            this.label5.Text = "* Nom du contact :";
             // 
             // label6
             // 
@@ -245,19 +246,29 @@
             // 
             // BTN_Ok
             // 
-            this.BTN_Ok.Location = new System.Drawing.Point(1172, 488);
+            this.BTN_Ok.Location = new System.Drawing.Point(1204, 488);
             this.BTN_Ok.Name = "BTN_Ok";
-            this.BTN_Ok.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Ok.Size = new System.Drawing.Size(43, 23);
             this.BTN_Ok.TabIndex = 12;
-            this.BTN_Ok.Text = "Okay";
+            this.BTN_Ok.Text = "Ok";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 392);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 13);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "* = Champs obligatoires";
             // 
             // GestionEntreprises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 523);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.LB_NumEnt);
             this.Controls.Add(this.TB_Cote);
@@ -313,5 +324,6 @@
         private System.Windows.Forms.TextBox TB_Cote;
         private System.Windows.Forms.Label LB_NumEnt;
         private System.Windows.Forms.Button BTN_Ok;
+        private System.Windows.Forms.Label label9;
     }
 }

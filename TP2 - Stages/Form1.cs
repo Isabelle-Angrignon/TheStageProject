@@ -76,6 +76,7 @@ namespace TP2___Stages
             MettreAJour();
             UpdateDGV();
             TTIP_profil.SetToolTip(BN_TypeInfo, "Changer de profil");
+            DonnerCouleur();
         }
 
         private void MettreAJour()
@@ -291,6 +292,25 @@ namespace TP2___Stages
         private void FormPrincipale_Activated(object sender, EventArgs e)
         {
             UpdateDGV();
+        }
+        private void DonnerCouleur()
+        {
+            for (int i = 0; i < DGV_Stages.RowCount; i++)
+            {
+                if (int.Parse(DGV_Stages.Rows[i].Cells[4].Value.ToString()) >= 5)
+                {
+                    DGV_Stages.Rows[i].DefaultCellStyle.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    DGV_Stages.Rows[i].DefaultCellStyle.BackColor = Color.Tomato;
+                }
+            }
+        }
+
+        private void DGV_Stages_Paint(object sender, PaintEventArgs e)
+        {
+            DonnerCouleur();
         }
     }
 }

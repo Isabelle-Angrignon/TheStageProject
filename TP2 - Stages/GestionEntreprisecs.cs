@@ -70,7 +70,7 @@ namespace TP2___Stages
                 }
                 else
                 {
-                    DGV_GestionEnt.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                    DGV_GestionEnt.Rows[i].DefaultCellStyle.BackColor = Color.Tomato;
                 }
             }
         }
@@ -159,7 +159,8 @@ namespace TP2___Stages
 
                 RemplirDGV();
             }
-            catch (OracleException ex) { MessageBox.Show(ex.Message); } 
+            catch (OracleException ex) { ErrorMessage(ex); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); } 
         }
 
         private void BTN_EditStage_Click(object sender, EventArgs e)
@@ -211,7 +212,8 @@ namespace TP2___Stages
 
                 RemplirDGV();
             }
-            catch (OracleException ex) { MessageBox.Show(ex.Message); } 
+            catch (OracleException ex) { ErrorMessage(ex); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); } 
         }
 
         private void BTN_DeleteStage_Click(object sender, EventArgs e)
@@ -234,7 +236,8 @@ namespace TP2___Stages
                     RemplirDGV();
                 }
             }
-            catch (OracleException ex) { MessageBox.Show(ex.Message); }
+            catch (OracleException ex) { ErrorMessage(ex); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); } 
         }
 
         private void DGV_GestionEnt_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -263,6 +266,22 @@ namespace TP2___Stages
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); };
             f.ShowDialog();
+        }
+        private void ErrorMessage(OracleException Ex)
+        {
+            switch (Ex.Number)
+            {
+                case 01400:
+                    //check not null
+                    MessageBox.Show("Il y a des champs obligatoires vides");
+                    break;
+                case 01438:
+                    // Si le number est plus long que spécifié
+                    MessageBox.Show("La cote doit être entre 0 et 10");
+                    break;                
+                default: MessageBox.Show(Ex.Message.ToString());
+                    break;
+            }
         }
     }
 }

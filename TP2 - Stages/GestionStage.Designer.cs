@@ -50,6 +50,7 @@
             this.BTN_EditStage = new System.Windows.Forms.Button();
             this.BTN_DeleteStage = new System.Windows.Forms.Button();
             this.BTN_AjoutStage = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionStage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,18 +140,18 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(24, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Type :";
+            this.label5.Text = "Profil :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(24, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 13);
+            this.label6.Size = new System.Drawing.Size(114, 13);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Numero d\'entreprise :";
+            this.label6.Text = "* Numero d\'entreprise :";
             // 
             // BTN_Ok
             // 
@@ -252,11 +253,21 @@
             this.BTN_AjoutStage.UseVisualStyleBackColor = true;
             this.BTN_AjoutStage.Click += new System.EventHandler(this.BTN_AjoutStage_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 251);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "* = Champs obligatoires";
+            // 
             // GestionStage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1205, 471);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.DTP_FinStage);
             this.Controls.Add(this.DTP_DebutStage);
@@ -313,5 +324,6 @@
         private System.Windows.Forms.DateTimePicker DTP_DebutStage;
         private System.Windows.Forms.DateTimePicker DTP_FinStage;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

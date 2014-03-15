@@ -268,16 +268,20 @@ namespace TP2___Stages
             switch (Ex.Number)
             {
                 case 02290:
-                    MessageBox.Show("Entrée invalide");
+                    //check not in
+                    MessageBox.Show("Spécialisation invalide");
                     break;
                 case 02292:
+                    // au lieu d'afficher violation de clé étrangère , on affiche ceci:
                     MessageBox.Show("Impossible de supprimer le stage; un étudiant lui est assigné");
                     break;
                 case 01400:
-                    MessageBox.Show("Il y a des champs vides");
+                    //check not null
+                    MessageBox.Show("Il y a des champs obligatoires vides");
                     break;
                 case 01438:
-                    MessageBox.Show("Le nombre est trop long");
+                    // Si le number est plus long que spécifié
+                    MessageBox.Show("Impossible d'ajouter le stage; le numéro d'entreprise spécifié n'existe pas");
                     break;
                 case 02291:
                     MessageBox.Show("Impossible d'ajouter le stage; le numéro d'entreprise spécifié n'existe pas");
