@@ -70,6 +70,12 @@
     <Compile Include="GestionStage.Designer.cs">
       <DependentUpon>GestionStage.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionStagiaires.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionStagiaires.Designer.cs">
+      <DependentUpon>GestionStagiaires.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AProposcs.resx">
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionStage.resx">
       <DependentUpon>GestionStage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionStagiaires.resx">
+      <DependentUpon>GestionStagiaires.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

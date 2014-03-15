@@ -40,16 +40,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BTN_Ok = new System.Windows.Forms.Button();
-            this.BTN_AjoutStage = new System.Windows.Forms.Button();
-            this.BTN_DeleteStage = new System.Windows.Forms.Button();
-            this.BTN_EditStage = new System.Windows.Forms.Button();
-            this.BTN_ClearStage = new System.Windows.Forms.Button();
             this.LB_NumStage = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DTP_DebutStage = new System.Windows.Forms.DateTimePicker();
             this.DTP_FinStage = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.BTN_ClearStage = new System.Windows.Forms.Button();
+            this.BTN_EditStage = new System.Windows.Forms.Button();
+            this.BTN_DeleteStage = new System.Windows.Forms.Button();
+            this.BTN_AjoutStage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionStage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,53 +154,13 @@
             // 
             // BTN_Ok
             // 
-            this.BTN_Ok.Location = new System.Drawing.Point(1096, 436);
+            this.BTN_Ok.Location = new System.Drawing.Point(1134, 436);
             this.BTN_Ok.Name = "BTN_Ok";
-            this.BTN_Ok.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Ok.Size = new System.Drawing.Size(37, 23);
             this.BTN_Ok.TabIndex = 13;
-            this.BTN_Ok.Text = "Okay";
+            this.BTN_Ok.Text = "Ok";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
-            // 
-            // BTN_AjoutStage
-            // 
-            this.BTN_AjoutStage.Image = global::TP2___Stages.Properties.Resources.Add_Neutral;
-            this.BTN_AjoutStage.Location = new System.Drawing.Point(388, 65);
-            this.BTN_AjoutStage.Name = "BTN_AjoutStage";
-            this.BTN_AjoutStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_AjoutStage.TabIndex = 15;
-            this.BTN_AjoutStage.UseVisualStyleBackColor = true;
-            this.BTN_AjoutStage.Click += new System.EventHandler(this.BTN_AjoutStage_Click);
-            // 
-            // BTN_DeleteStage
-            // 
-            this.BTN_DeleteStage.Image = global::TP2___Stages.Properties.Resources.Delete_Neutral;
-            this.BTN_DeleteStage.Location = new System.Drawing.Point(388, 112);
-            this.BTN_DeleteStage.Name = "BTN_DeleteStage";
-            this.BTN_DeleteStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_DeleteStage.TabIndex = 16;
-            this.BTN_DeleteStage.UseVisualStyleBackColor = true;
-            this.BTN_DeleteStage.Click += new System.EventHandler(this.BTN_DeleteStage_Click);
-            // 
-            // BTN_EditStage
-            // 
-            this.BTN_EditStage.Image = global::TP2___Stages.Properties.Resources.Edit_Neutral;
-            this.BTN_EditStage.Location = new System.Drawing.Point(388, 159);
-            this.BTN_EditStage.Name = "BTN_EditStage";
-            this.BTN_EditStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_EditStage.TabIndex = 17;
-            this.BTN_EditStage.UseVisualStyleBackColor = true;
-            this.BTN_EditStage.Click += new System.EventHandler(this.BTN_EditStage_Click);
-            // 
-            // BTN_ClearStage
-            // 
-            this.BTN_ClearStage.Image = global::TP2___Stages.Properties.Resources.Clear_Neutral;
-            this.BTN_ClearStage.Location = new System.Drawing.Point(388, 206);
-            this.BTN_ClearStage.Name = "BTN_ClearStage";
-            this.BTN_ClearStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_ClearStage.TabIndex = 18;
-            this.BTN_ClearStage.UseVisualStyleBackColor = true;
-            this.BTN_ClearStage.Click += new System.EventHandler(this.BTN_ClearStage_Click);
             // 
             // LB_NumStage
             // 
@@ -251,6 +211,46 @@
             this.label8.Size = new System.Drawing.Size(60, 13);
             this.label8.TabIndex = 24;
             this.label8.Text = "Description";
+            // 
+            // BTN_ClearStage
+            // 
+            this.BTN_ClearStage.Image = global::TP2___Stages.Properties.Resources.Clear_Neutral;
+            this.BTN_ClearStage.Location = new System.Drawing.Point(388, 206);
+            this.BTN_ClearStage.Name = "BTN_ClearStage";
+            this.BTN_ClearStage.Size = new System.Drawing.Size(45, 41);
+            this.BTN_ClearStage.TabIndex = 18;
+            this.BTN_ClearStage.UseVisualStyleBackColor = true;
+            this.BTN_ClearStage.Click += new System.EventHandler(this.BTN_ClearStage_Click);
+            // 
+            // BTN_EditStage
+            // 
+            this.BTN_EditStage.Image = global::TP2___Stages.Properties.Resources.Edit_Neutral;
+            this.BTN_EditStage.Location = new System.Drawing.Point(388, 159);
+            this.BTN_EditStage.Name = "BTN_EditStage";
+            this.BTN_EditStage.Size = new System.Drawing.Size(45, 41);
+            this.BTN_EditStage.TabIndex = 17;
+            this.BTN_EditStage.UseVisualStyleBackColor = true;
+            this.BTN_EditStage.Click += new System.EventHandler(this.BTN_EditStage_Click);
+            // 
+            // BTN_DeleteStage
+            // 
+            this.BTN_DeleteStage.Image = global::TP2___Stages.Properties.Resources.Delete_Neutral;
+            this.BTN_DeleteStage.Location = new System.Drawing.Point(388, 112);
+            this.BTN_DeleteStage.Name = "BTN_DeleteStage";
+            this.BTN_DeleteStage.Size = new System.Drawing.Size(45, 41);
+            this.BTN_DeleteStage.TabIndex = 16;
+            this.BTN_DeleteStage.UseVisualStyleBackColor = true;
+            this.BTN_DeleteStage.Click += new System.EventHandler(this.BTN_DeleteStage_Click);
+            // 
+            // BTN_AjoutStage
+            // 
+            this.BTN_AjoutStage.Image = global::TP2___Stages.Properties.Resources.Add_Neutral;
+            this.BTN_AjoutStage.Location = new System.Drawing.Point(388, 65);
+            this.BTN_AjoutStage.Name = "BTN_AjoutStage";
+            this.BTN_AjoutStage.Size = new System.Drawing.Size(45, 41);
+            this.BTN_AjoutStage.TabIndex = 15;
+            this.BTN_AjoutStage.UseVisualStyleBackColor = true;
+            this.BTN_AjoutStage.Click += new System.EventHandler(this.BTN_AjoutStage_Click);
             // 
             // GestionStage
             // 
