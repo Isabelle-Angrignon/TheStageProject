@@ -257,5 +257,11 @@ namespace TP2___Stages
 
             UpdateDGV();
         }
+
+        private void entreprisesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionEntreprisecs f = new GestionEntreprisecs();
+            f.ShowDialog();
+        }
     }
 }

@@ -76,22 +76,22 @@
             // 
             this.étudiantsToolStripMenuItem.Enabled = false;
             this.étudiantsToolStripMenuItem.Name = "étudiantsToolStripMenuItem";
-            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.étudiantsToolStripMenuItem.Text = "Étudiants";
             // 
             // stagesToolStripMenuItem
             // 
             this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
-            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stagesToolStripMenuItem.Text = "Stages";
             this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
             // 
             // entreprisesToolStripMenuItem
             // 
-            this.entreprisesToolStripMenuItem.Enabled = false;
             this.entreprisesToolStripMenuItem.Name = "entreprisesToolStripMenuItem";
-            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.entreprisesToolStripMenuItem.Text = "Entreprises";
+            this.entreprisesToolStripMenuItem.Click += new System.EventHandler(this.entreprisesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 

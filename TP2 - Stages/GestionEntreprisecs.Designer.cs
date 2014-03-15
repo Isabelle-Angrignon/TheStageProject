@@ -244,6 +244,7 @@
             this.BTN_Ok.TabIndex = 39;
             this.BTN_Ok.Text = "Okay";
             this.BTN_Ok.UseVisualStyleBackColor = true;
+            this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
             // 
             // GestionEntreprisecs
             // 
@@ -273,7 +274,7 @@
             this.Controls.Add(this.BTN_AjoutStage);
             this.Controls.Add(this.DGV_GestionEnt);
             this.Name = "GestionEntreprisecs";
-            this.Text = "GestionEntreprisecs";
+            this.Text = "Gestion Entreprise";
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionEnt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
