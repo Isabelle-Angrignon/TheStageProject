@@ -46,27 +46,37 @@ namespace TP2___Stages
 
         private void RemplirDGVStage()
         {
-            OracleCommand oraliste = new OracleCommand(PackageStage, conn);
-            oraliste.CommandText = PackageStage + ".LISTER";
-            oraliste.CommandType = CommandType.StoredProcedure;
-
-            OracleParameter OrapameResultat = new OracleParameter("LISTE",
-            OracleDbType.RefCursor);
-            OrapameResultat.Direction = ParameterDirection.ReturnValue;
-            oraliste.Parameters.Add(OrapameResultat);
-
-            OracleDataAdapter Oraliste = new OracleDataAdapter(oraliste);
-
-            if (mainDataSet.Tables.Contains("Liste_stage"))
+            try
             {
-                mainDataSet.Tables["Liste_stage"].Clear();
-            }
-            Oraliste.Fill(mainDataSet, "Liste_stage");
-            Oraliste.Dispose();
+                OracleCommand oraliste = new OracleCommand(PackageStage, conn);
+                oraliste.CommandText = PackageStage + ".LISTER";
+                oraliste.CommandType = CommandType.StoredProcedure;
 
-            BindingSource maSource = new BindingSource(mainDataSet, "Liste_stage");
-            DGV_GestionStage.DataSource = maSource;
-            RemplirTB();
+                OracleParameter OrapameResultat = new OracleParameter("LISTE",
+                OracleDbType.RefCursor);
+                OrapameResultat.Direction = ParameterDirection.ReturnValue;
+                oraliste.Parameters.Add(OrapameResultat);
+
+                OracleDataAdapter Oraliste = new OracleDataAdapter(oraliste);
+
+                if (mainDataSet.Tables.Contains("Liste_stage"))
+                {
+                    mainDataSet.Tables["Liste_stage"].Clear();
+                }
+                Oraliste.Fill(mainDataSet, "Liste_stage");
+                Oraliste.Dispose();
+
+                BindingSource maSource = new BindingSource(mainDataSet, "Liste_stage");
+                DGV_GestionStage.DataSource = maSource;
+                RemplirTB();
+            }
+
+            catch (OracleException ex)
+            {
+                ErrorMessage(ex);
+            }
+
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void BTN_AjoutStage_Click(object sender, EventArgs e)
@@ -117,7 +127,12 @@ namespace TP2___Stages
 
                 RemplirDGVStage();
             }
-            catch (OracleException ex) { MessageBox.Show(ex.Message); } 
+            catch (OracleException ex)
+            {
+                ErrorMessage(ex);
+            }
+
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void BTN_EditStage_Click(object sender, EventArgs e)
@@ -172,7 +187,12 @@ namespace TP2___Stages
 
                 RemplirDGVStage();
             }
-            catch (OracleException ex) { MessageBox.Show(ex.Message); }            
+            catch (OracleException ex)
+            {
+                ErrorMessage(ex);
+            }
+
+            catch (Exception ex) { MessageBox.Show(ex.Message); }         
         }
 
         private void BTN_DeleteStage_Click(object sender, EventArgs e)
@@ -195,7 +215,13 @@ namespace TP2___Stages
                     RemplirDGVStage();
                 }
             }
-            catch (OracleException ex) { MessageBox.Show(ex.Message); }
+
+            catch (OracleException ex)
+            {
+                ErrorMessage(ex);
+            }
+
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void DGV_GestionStage_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -229,6 +255,27 @@ namespace TP2___Stages
             DTP_DebutStage.Value = DateTime.Now;
             DTP_FinStage.Value = DateTime.Now;
             RTB_Description.Text = "";
-        }  
+        }
+
+        private void ErrorMessage(OracleException Ex)
+        {
+            switch (Ex.Number)
+            {
+                case 02290:
+                    MessageBox.Show("Entrée invalide");
+                    break;
+                case 02292:
+                    MessageBox.Show("Impossible de supprimer le stage; un étudiant lui est assigné");
+                    break;
+                case 01400:
+                    MessageBox.Show("Il y a des champs vides");
+                    break;
+                case 01438:
+                    MessageBox.Show("Le nombre est trop long");
+                    break;
+                default: MessageBox.Show(Ex.Message.ToString());
+                    break;
+            }
+        }
     }
 }
