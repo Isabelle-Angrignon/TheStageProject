@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.LB_NumStage = new System.Windows.Forms.Label();
+            this.LB_NumAd = new System.Windows.Forms.Label();
             this.BTN_ClearStage = new System.Windows.Forms.Button();
             this.BTN_EditStage = new System.Windows.Forms.Button();
             this.BTN_DeleteStage = new System.Windows.Forms.Button();
             this.BTN_AjoutStage = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TB_Type = new System.Windows.Forms.TextBox();
-            this.TB_Logiciel = new System.Windows.Forms.TextBox();
-            this.TB_Plateforme = new System.Windows.Forms.TextBox();
-            this.DGV_GestionStage = new System.Windows.Forms.DataGridView();
+            this.TB_Prenom = new System.Windows.Forms.TextBox();
+            this.TB_Nom = new System.Windows.Forms.TextBox();
+            this.DGV_Stagiaires = new System.Windows.Forms.DataGridView();
             this.BTN_Ok = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionStage)).BeginInit();
+            this.TB_Special = new System.Windows.Forms.TextBox();
+            this.TB_Courriel = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Stagiaires)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -56,14 +56,14 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "Spécialisation";
             // 
-            // LB_NumStage
+            // LB_NumAd
             // 
-            this.LB_NumStage.AutoSize = true;
-            this.LB_NumStage.Location = new System.Drawing.Point(94, 9);
-            this.LB_NumStage.Name = "LB_NumStage";
-            this.LB_NumStage.Size = new System.Drawing.Size(35, 13);
-            this.LB_NumStage.TabIndex = 37;
-            this.LB_NumStage.Text = "label7";
+            this.LB_NumAd.AutoSize = true;
+            this.LB_NumAd.Location = new System.Drawing.Point(94, 9);
+            this.LB_NumAd.Name = "LB_NumAd";
+            this.LB_NumAd.Size = new System.Drawing.Size(35, 13);
+            this.LB_NumAd.TabIndex = 37;
+            this.LB_NumAd.Text = "label7";
             // 
             // BTN_ClearStage
             // 
@@ -101,15 +101,6 @@
             this.BTN_AjoutStage.TabIndex = 33;
             this.BTN_AjoutStage.UseVisualStyleBackColor = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Courriel :";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -137,43 +128,36 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "#DA";
             // 
-            // TB_Type
+            // TB_Prenom
             // 
-            this.TB_Type.Location = new System.Drawing.Point(90, 86);
-            this.TB_Type.Name = "TB_Type";
-            this.TB_Type.Size = new System.Drawing.Size(140, 20);
-            this.TB_Type.TabIndex = 26;
+            this.TB_Prenom.Location = new System.Drawing.Point(90, 60);
+            this.TB_Prenom.Name = "TB_Prenom";
+            this.TB_Prenom.Size = new System.Drawing.Size(140, 20);
+            this.TB_Prenom.TabIndex = 25;
             // 
-            // TB_Logiciel
+            // TB_Nom
             // 
-            this.TB_Logiciel.Location = new System.Drawing.Point(90, 60);
-            this.TB_Logiciel.Name = "TB_Logiciel";
-            this.TB_Logiciel.Size = new System.Drawing.Size(140, 20);
-            this.TB_Logiciel.TabIndex = 25;
+            this.TB_Nom.Location = new System.Drawing.Point(90, 34);
+            this.TB_Nom.Name = "TB_Nom";
+            this.TB_Nom.Size = new System.Drawing.Size(140, 20);
+            this.TB_Nom.TabIndex = 24;
             // 
-            // TB_Plateforme
+            // DGV_Stagiaires
             // 
-            this.TB_Plateforme.Location = new System.Drawing.Point(90, 34);
-            this.TB_Plateforme.Name = "TB_Plateforme";
-            this.TB_Plateforme.Size = new System.Drawing.Size(140, 20);
-            this.TB_Plateforme.TabIndex = 24;
-            // 
-            // DGV_GestionStage
-            // 
-            this.DGV_GestionStage.AllowUserToAddRows = false;
-            this.DGV_GestionStage.AllowUserToDeleteRows = false;
-            this.DGV_GestionStage.AllowUserToResizeRows = false;
-            this.DGV_GestionStage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DGV_GestionStage.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.DGV_GestionStage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_GestionStage.Location = new System.Drawing.Point(293, 9);
-            this.DGV_GestionStage.MultiSelect = false;
-            this.DGV_GestionStage.Name = "DGV_GestionStage";
-            this.DGV_GestionStage.ReadOnly = true;
-            this.DGV_GestionStage.RowHeadersWidth = 20;
-            this.DGV_GestionStage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_GestionStage.Size = new System.Drawing.Size(427, 262);
-            this.DGV_GestionStage.TabIndex = 42;
+            this.DGV_Stagiaires.AllowUserToAddRows = false;
+            this.DGV_Stagiaires.AllowUserToDeleteRows = false;
+            this.DGV_Stagiaires.AllowUserToResizeRows = false;
+            this.DGV_Stagiaires.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_Stagiaires.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DGV_Stagiaires.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Stagiaires.Location = new System.Drawing.Point(293, 9);
+            this.DGV_Stagiaires.MultiSelect = false;
+            this.DGV_Stagiaires.Name = "DGV_Stagiaires";
+            this.DGV_Stagiaires.ReadOnly = true;
+            this.DGV_Stagiaires.RowHeadersWidth = 20;
+            this.DGV_Stagiaires.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Stagiaires.Size = new System.Drawing.Size(427, 262);
+            this.DGV_Stagiaires.TabIndex = 42;
             // 
             // BTN_Ok
             // 
@@ -185,23 +169,39 @@
             this.BTN_Ok.UseVisualStyleBackColor = true;
             this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
             // 
-            // textBox1
+            // TB_Special
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 20);
-            this.textBox1.TabIndex = 44;
+            this.TB_Special.Location = new System.Drawing.Point(90, 113);
+            this.TB_Special.Name = "TB_Special";
+            this.TB_Special.Size = new System.Drawing.Size(140, 20);
+            this.TB_Special.TabIndex = 44;
+            // 
+            // TB_Courriel
+            // 
+            this.TB_Courriel.Location = new System.Drawing.Point(90, 86);
+            this.TB_Courriel.Name = "TB_Courriel";
+            this.TB_Courriel.Size = new System.Drawing.Size(140, 20);
+            this.TB_Courriel.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 89);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Courriel :";
             // 
             // GestionStagiaires
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 315);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TB_Special);
             this.Controls.Add(this.BTN_Ok);
-            this.Controls.Add(this.DGV_GestionStage);
+            this.Controls.Add(this.DGV_Stagiaires);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.LB_NumStage);
+            this.Controls.Add(this.LB_NumAd);
             this.Controls.Add(this.BTN_ClearStage);
             this.Controls.Add(this.BTN_EditStage);
             this.Controls.Add(this.BTN_DeleteStage);
@@ -210,13 +210,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TB_Type);
-            this.Controls.Add(this.TB_Logiciel);
-            this.Controls.Add(this.TB_Plateforme);
+            this.Controls.Add(this.TB_Courriel);
+            this.Controls.Add(this.TB_Prenom);
+            this.Controls.Add(this.TB_Nom);
             this.Name = "GestionStagiaires";
             this.Text = "Gestion des stagiaires";
             this.Load += new System.EventHandler(this.GestionStagiaires_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionStage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Stagiaires)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,21 +225,21 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label LB_NumStage;
+        private System.Windows.Forms.Label LB_NumAd;
         private System.Windows.Forms.Button BTN_ClearStage;
         private System.Windows.Forms.Button BTN_EditStage;
         private System.Windows.Forms.Button BTN_DeleteStage;
         private System.Windows.Forms.Button BTN_AjoutStage;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TB_Type;
-        private System.Windows.Forms.TextBox TB_Logiciel;
-        private System.Windows.Forms.TextBox TB_Plateforme;
-        private System.Windows.Forms.DataGridView DGV_GestionStage;
+        private System.Windows.Forms.TextBox TB_Prenom;
+        private System.Windows.Forms.TextBox TB_Nom;
+        private System.Windows.Forms.DataGridView DGV_Stagiaires;
         private System.Windows.Forms.Button BTN_Ok;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TB_Special;
+        private System.Windows.Forms.TextBox TB_Courriel;
+        private System.Windows.Forms.Label label5;
 
     }
 }
