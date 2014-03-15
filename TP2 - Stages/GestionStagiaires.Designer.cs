@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.BTN_ClearStage = new System.Windows.Forms.Button();
-            this.BTN_EditStage = new System.Windows.Forms.Button();
-            this.BTN_DeleteStage = new System.Windows.Forms.Button();
-            this.BTN_AjoutStage = new System.Windows.Forms.Button();
+            this.BTN_Clear = new System.Windows.Forms.Button();
+            this.BTN_Edit = new System.Windows.Forms.Button();
+            this.BTN_Delete = new System.Windows.Forms.Button();
+            this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +44,8 @@
             this.TB_Courriel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TB_Numad = new System.Windows.Forms.TextBox();
+            this.TB_NoStage = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Stagiaires)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,41 +58,45 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "Spécialisation";
             // 
-            // BTN_ClearStage
+            // BTN_Clear
             // 
-            this.BTN_ClearStage.Image = global::TP2___Stages.Properties.Resources.Clear_Neutral;
-            this.BTN_ClearStage.Location = new System.Drawing.Point(242, 162);
-            this.BTN_ClearStage.Name = "BTN_ClearStage";
-            this.BTN_ClearStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_ClearStage.TabIndex = 36;
-            this.BTN_ClearStage.UseVisualStyleBackColor = true;
+            this.BTN_Clear.Image = global::TP2___Stages.Properties.Resources.Clear_Neutral;
+            this.BTN_Clear.Location = new System.Drawing.Point(242, 162);
+            this.BTN_Clear.Name = "BTN_Clear";
+            this.BTN_Clear.Size = new System.Drawing.Size(45, 41);
+            this.BTN_Clear.TabIndex = 36;
+            this.BTN_Clear.UseVisualStyleBackColor = true;
+            this.BTN_Clear.Click += new System.EventHandler(this.BTN_Clear_Click);
             // 
-            // BTN_EditStage
+            // BTN_Edit
             // 
-            this.BTN_EditStage.Image = global::TP2___Stages.Properties.Resources.Edit_Neutral;
-            this.BTN_EditStage.Location = new System.Drawing.Point(242, 115);
-            this.BTN_EditStage.Name = "BTN_EditStage";
-            this.BTN_EditStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_EditStage.TabIndex = 35;
-            this.BTN_EditStage.UseVisualStyleBackColor = true;
+            this.BTN_Edit.Image = global::TP2___Stages.Properties.Resources.Edit_Neutral;
+            this.BTN_Edit.Location = new System.Drawing.Point(242, 115);
+            this.BTN_Edit.Name = "BTN_Edit";
+            this.BTN_Edit.Size = new System.Drawing.Size(45, 41);
+            this.BTN_Edit.TabIndex = 35;
+            this.BTN_Edit.UseVisualStyleBackColor = true;
+            this.BTN_Edit.Click += new System.EventHandler(this.BTN_Edit_Click);
             // 
-            // BTN_DeleteStage
+            // BTN_Delete
             // 
-            this.BTN_DeleteStage.Image = global::TP2___Stages.Properties.Resources.Delete_Neutral;
-            this.BTN_DeleteStage.Location = new System.Drawing.Point(242, 68);
-            this.BTN_DeleteStage.Name = "BTN_DeleteStage";
-            this.BTN_DeleteStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_DeleteStage.TabIndex = 34;
-            this.BTN_DeleteStage.UseVisualStyleBackColor = true;
+            this.BTN_Delete.Image = global::TP2___Stages.Properties.Resources.Delete_Neutral;
+            this.BTN_Delete.Location = new System.Drawing.Point(242, 68);
+            this.BTN_Delete.Name = "BTN_Delete";
+            this.BTN_Delete.Size = new System.Drawing.Size(45, 41);
+            this.BTN_Delete.TabIndex = 34;
+            this.BTN_Delete.UseVisualStyleBackColor = true;
+            this.BTN_Delete.Click += new System.EventHandler(this.BTN_Delete_Click);
             // 
-            // BTN_AjoutStage
+            // BTN_Ajouter
             // 
-            this.BTN_AjoutStage.Image = global::TP2___Stages.Properties.Resources.Add_Neutral;
-            this.BTN_AjoutStage.Location = new System.Drawing.Point(242, 21);
-            this.BTN_AjoutStage.Name = "BTN_AjoutStage";
-            this.BTN_AjoutStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_AjoutStage.TabIndex = 33;
-            this.BTN_AjoutStage.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Image = global::TP2___Stages.Properties.Resources.Add_Neutral;
+            this.BTN_Ajouter.Location = new System.Drawing.Point(242, 21);
+            this.BTN_Ajouter.Name = "BTN_Ajouter";
+            this.BTN_Ajouter.Size = new System.Drawing.Size(45, 41);
+            this.BTN_Ajouter.TabIndex = 33;
+            this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // label4
             // 
@@ -191,20 +197,38 @@
             this.TB_Numad.Size = new System.Drawing.Size(140, 20);
             this.TB_Numad.TabIndex = 45;
             // 
+            // TB_NoStage
+            // 
+            this.TB_NoStage.Location = new System.Drawing.Point(90, 140);
+            this.TB_NoStage.Name = "TB_NoStage";
+            this.TB_NoStage.Size = new System.Drawing.Size(140, 20);
+            this.TB_NoStage.TabIndex = 47;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 143);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "No de stage";
+            // 
             // GestionStagiaires
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 310);
+            this.Controls.Add(this.TB_NoStage);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.TB_Numad);
             this.Controls.Add(this.TB_Special);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.DGV_Stagiaires);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.BTN_ClearStage);
-            this.Controls.Add(this.BTN_EditStage);
-            this.Controls.Add(this.BTN_DeleteStage);
-            this.Controls.Add(this.BTN_AjoutStage);
+            this.Controls.Add(this.BTN_Clear);
+            this.Controls.Add(this.BTN_Edit);
+            this.Controls.Add(this.BTN_Delete);
+            this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -224,10 +248,10 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BTN_ClearStage;
-        private System.Windows.Forms.Button BTN_EditStage;
-        private System.Windows.Forms.Button BTN_DeleteStage;
-        private System.Windows.Forms.Button BTN_AjoutStage;
+        private System.Windows.Forms.Button BTN_Clear;
+        private System.Windows.Forms.Button BTN_Edit;
+        private System.Windows.Forms.Button BTN_Delete;
+        private System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -239,6 +263,8 @@
         private System.Windows.Forms.TextBox TB_Courriel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TB_Numad;
+        private System.Windows.Forms.TextBox TB_NoStage;
+        private System.Windows.Forms.Label label6;
 
     }
 }
