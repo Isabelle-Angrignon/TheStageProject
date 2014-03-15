@@ -261,6 +261,7 @@ namespace TP2___Stages
         private void entreprisesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GestionEntreprisecs f = new GestionEntreprisecs();
+            f.conn = conn;
             f.ShowDialog();
         }
 

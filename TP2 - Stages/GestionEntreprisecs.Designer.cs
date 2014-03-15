@@ -275,6 +275,7 @@
             this.Controls.Add(this.DGV_GestionEnt);
             this.Name = "GestionEntreprisecs";
             this.Text = "Gestion Entreprise";
+            this.Load += new System.EventHandler(this.GestionEntreprisecs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionEnt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
