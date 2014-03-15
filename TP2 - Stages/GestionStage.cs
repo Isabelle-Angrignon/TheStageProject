@@ -273,6 +273,9 @@ namespace TP2___Stages
                 case 01438:
                     MessageBox.Show("Le nombre est trop long");
                     break;
+                case 02291:
+                    MessageBox.Show("Impossible d'ajouter le stage; le numéro d'entreprise spécifié n'existe pas");
+                    break;
                 default: MessageBox.Show(Ex.Message.ToString());
                     break;
             }
