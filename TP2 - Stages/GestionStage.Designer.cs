@@ -68,7 +68,7 @@
             this.DGV_GestionStage.RowHeadersWidth = 20;
             this.DGV_GestionStage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_GestionStage.Size = new System.Drawing.Size(708, 418);
-            this.DGV_GestionStage.TabIndex = 0;
+            this.DGV_GestionStage.TabIndex = 20;
             this.DGV_GestionStage.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_GestionStage_CellClick);
             // 
             // RTB_Description
@@ -76,7 +76,7 @@
             this.RTB_Description.Location = new System.Drawing.Point(27, 320);
             this.RTB_Description.Name = "RTB_Description";
             this.RTB_Description.Size = new System.Drawing.Size(417, 110);
-            this.RTB_Description.TabIndex = 1;
+            this.RTB_Description.TabIndex = 14;
             this.RTB_Description.Text = "";
             // 
             // TB_Plateforme
@@ -84,28 +84,28 @@
             this.TB_Plateforme.Location = new System.Drawing.Point(136, 81);
             this.TB_Plateforme.Name = "TB_Plateforme";
             this.TB_Plateforme.Size = new System.Drawing.Size(100, 20);
-            this.TB_Plateforme.TabIndex = 3;
+            this.TB_Plateforme.TabIndex = 8;
             // 
             // TB_Logiciel
             // 
             this.TB_Logiciel.Location = new System.Drawing.Point(136, 107);
             this.TB_Logiciel.Name = "TB_Logiciel";
             this.TB_Logiciel.Size = new System.Drawing.Size(100, 20);
-            this.TB_Logiciel.TabIndex = 4;
+            this.TB_Logiciel.TabIndex = 9;
             // 
             // TB_Type
             // 
             this.TB_Type.Location = new System.Drawing.Point(136, 133);
             this.TB_Type.Name = "TB_Type";
             this.TB_Type.Size = new System.Drawing.Size(100, 20);
-            this.TB_Type.TabIndex = 5;
+            this.TB_Type.TabIndex = 10;
             // 
             // TB_NumEnt
             // 
             this.TB_NumEnt.Location = new System.Drawing.Point(136, 159);
             this.TB_NumEnt.Name = "TB_NumEnt";
             this.TB_NumEnt.Size = new System.Drawing.Size(100, 20);
-            this.TB_NumEnt.TabIndex = 6;
+            this.TB_NumEnt.TabIndex = 11;
             // 
             // label1
             // 
@@ -113,7 +113,7 @@
             this.label1.Location = new System.Drawing.Point(24, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Numero de stage :";
             // 
             // label3
@@ -122,7 +122,7 @@
             this.label3.Location = new System.Drawing.Point(24, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 1;
             this.label3.Text = "Plateforme :";
             // 
             // label4
@@ -131,7 +131,7 @@
             this.label4.Location = new System.Drawing.Point(24, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 2;
             this.label4.Text = "Logiciel :";
             // 
             // label5
@@ -140,7 +140,7 @@
             this.label5.Location = new System.Drawing.Point(24, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 11;
+            this.label5.TabIndex = 3;
             this.label5.Text = "Type :";
             // 
             // label6
@@ -149,7 +149,7 @@
             this.label6.Location = new System.Drawing.Point(24, 162);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 13);
-            this.label6.TabIndex = 12;
+            this.label6.TabIndex = 4;
             this.label6.Text = "Numero d\'entreprise :";
             // 
             // BTN_Ok
@@ -157,7 +157,7 @@
             this.BTN_Ok.Location = new System.Drawing.Point(1134, 436);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(37, 23);
-            this.BTN_Ok.TabIndex = 13;
+            this.BTN_Ok.TabIndex = 21;
             this.BTN_Ok.Text = "Ok";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
@@ -168,7 +168,7 @@
             this.LB_NumStage.Location = new System.Drawing.Point(133, 56);
             this.LB_NumStage.Name = "LB_NumStage";
             this.LB_NumStage.Size = new System.Drawing.Size(35, 13);
-            this.LB_NumStage.TabIndex = 19;
+            this.LB_NumStage.TabIndex = 7;
             this.LB_NumStage.Text = "label7";
             // 
             // label2
@@ -177,7 +177,7 @@
             this.label2.Location = new System.Drawing.Point(24, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
-            this.label2.TabIndex = 20;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Début du stage :";
             // 
             // label7
@@ -186,7 +186,7 @@
             this.label7.Location = new System.Drawing.Point(24, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 21;
+            this.label7.TabIndex = 6;
             this.label7.Text = "Fin du stage :";
             // 
             // DTP_DebutStage
@@ -194,14 +194,14 @@
             this.DTP_DebutStage.Location = new System.Drawing.Point(140, 190);
             this.DTP_DebutStage.Name = "DTP_DebutStage";
             this.DTP_DebutStage.Size = new System.Drawing.Size(200, 20);
-            this.DTP_DebutStage.TabIndex = 22;
+            this.DTP_DebutStage.TabIndex = 12;
             // 
             // DTP_FinStage
             // 
             this.DTP_FinStage.Location = new System.Drawing.Point(140, 218);
             this.DTP_FinStage.Name = "DTP_FinStage";
             this.DTP_FinStage.Size = new System.Drawing.Size(200, 20);
-            this.DTP_FinStage.TabIndex = 23;
+            this.DTP_FinStage.TabIndex = 13;
             // 
             // label8
             // 
@@ -209,7 +209,7 @@
             this.label8.Location = new System.Drawing.Point(24, 304);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 24;
+            this.label8.TabIndex = 15;
             this.label8.Text = "Description";
             // 
             // BTN_ClearStage
@@ -218,7 +218,7 @@
             this.BTN_ClearStage.Location = new System.Drawing.Point(388, 206);
             this.BTN_ClearStage.Name = "BTN_ClearStage";
             this.BTN_ClearStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_ClearStage.TabIndex = 18;
+            this.BTN_ClearStage.TabIndex = 19;
             this.BTN_ClearStage.UseVisualStyleBackColor = true;
             this.BTN_ClearStage.Click += new System.EventHandler(this.BTN_ClearStage_Click);
             // 
@@ -228,7 +228,7 @@
             this.BTN_EditStage.Location = new System.Drawing.Point(388, 159);
             this.BTN_EditStage.Name = "BTN_EditStage";
             this.BTN_EditStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_EditStage.TabIndex = 17;
+            this.BTN_EditStage.TabIndex = 18;
             this.BTN_EditStage.UseVisualStyleBackColor = true;
             this.BTN_EditStage.Click += new System.EventHandler(this.BTN_EditStage_Click);
             // 
@@ -238,7 +238,7 @@
             this.BTN_DeleteStage.Location = new System.Drawing.Point(388, 112);
             this.BTN_DeleteStage.Name = "BTN_DeleteStage";
             this.BTN_DeleteStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_DeleteStage.TabIndex = 16;
+            this.BTN_DeleteStage.TabIndex = 17;
             this.BTN_DeleteStage.UseVisualStyleBackColor = true;
             this.BTN_DeleteStage.Click += new System.EventHandler(this.BTN_DeleteStage_Click);
             // 
@@ -248,7 +248,7 @@
             this.BTN_AjoutStage.Location = new System.Drawing.Point(388, 65);
             this.BTN_AjoutStage.Name = "BTN_AjoutStage";
             this.BTN_AjoutStage.Size = new System.Drawing.Size(45, 41);
-            this.BTN_AjoutStage.TabIndex = 15;
+            this.BTN_AjoutStage.TabIndex = 16;
             this.BTN_AjoutStage.UseVisualStyleBackColor = true;
             this.BTN_AjoutStage.Click += new System.EventHandler(this.BTN_AjoutStage_Click);
             // 

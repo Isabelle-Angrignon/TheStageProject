@@ -59,7 +59,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(871, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // gestionToolStripMenuItem
@@ -75,21 +75,21 @@
             // étudiantsToolStripMenuItem
             // 
             this.étudiantsToolStripMenuItem.Name = "étudiantsToolStripMenuItem";
-            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.étudiantsToolStripMenuItem.Text = "Étudiants";
             this.étudiantsToolStripMenuItem.Click += new System.EventHandler(this.étudiantsToolStripMenuItem_Click);
             // 
             // stagesToolStripMenuItem
             // 
             this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
-            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stagesToolStripMenuItem.Text = "Stages";
             this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
             // 
             // entreprisesToolStripMenuItem
             // 
             this.entreprisesToolStripMenuItem.Name = "entreprisesToolStripMenuItem";
-            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.entreprisesToolStripMenuItem.Text = "Entreprises";
             this.entreprisesToolStripMenuItem.Click += new System.EventHandler(this.entreprisesToolStripMenuItem_Click);
             // 
@@ -124,7 +124,7 @@
             this.DGV_Places.ReadOnly = true;
             this.DGV_Places.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Places.Size = new System.Drawing.Size(762, 251);
-            this.DGV_Places.TabIndex = 1;
+            this.DGV_Places.TabIndex = 4;
             this.DGV_Places.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Places_CellMouseDown);
             // 
             // BN_Assigner
@@ -132,7 +132,7 @@
             this.BN_Assigner.Location = new System.Drawing.Point(768, 275);
             this.BN_Assigner.Name = "BN_Assigner";
             this.BN_Assigner.Size = new System.Drawing.Size(91, 23);
-            this.BN_Assigner.TabIndex = 5;
+            this.BN_Assigner.TabIndex = 3;
             this.BN_Assigner.Text = "Assigner";
             this.BN_Assigner.UseVisualStyleBackColor = true;
             this.BN_Assigner.Click += new System.EventHandler(this.BN_Assigner_Click);
@@ -152,7 +152,7 @@
             this.DGV_Etudiants.ReadOnly = true;
             this.DGV_Etudiants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Etudiants.Size = new System.Drawing.Size(339, 175);
-            this.DGV_Etudiants.TabIndex = 6;
+            this.DGV_Etudiants.TabIndex = 1;
             // 
             // DGV_Stages
             // 
@@ -169,7 +169,7 @@
             this.DGV_Stages.ReadOnly = true;
             this.DGV_Stages.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Stages.Size = new System.Drawing.Size(484, 175);
-            this.DGV_Stages.TabIndex = 7;
+            this.DGV_Stages.TabIndex = 2;
             // 
             // label1
             // 
@@ -203,7 +203,7 @@
             this.BN_TypeInfo.Location = new System.Drawing.Point(30, 39);
             this.BN_TypeInfo.Name = "BN_TypeInfo";
             this.BN_TypeInfo.Size = new System.Drawing.Size(75, 23);
-            this.BN_TypeInfo.TabIndex = 11;
+            this.BN_TypeInfo.TabIndex = 0;
             this.BN_TypeInfo.Text = "Gestion";
             this.BN_TypeInfo.UseVisualStyleBackColor = true;
             this.BN_TypeInfo.Click += new System.EventHandler(this.BN_TypeInfo_Click);
@@ -227,7 +227,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipale";
             this.Text = "Affectation des stages";
+            this.Activated += new System.EventHandler(this.FormPrincipale_Activated);
             this.Load += new System.EventHandler(this.FormPrincipale_Load);
+            this.Enter += new System.EventHandler(this.FormPrincipale_Enter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Places)).EndInit();

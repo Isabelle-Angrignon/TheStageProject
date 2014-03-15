@@ -282,5 +282,15 @@ namespace TP2___Stages
             f.conn = conn;
             f.ShowDialog();
         }
+
+        private void FormPrincipale_Enter(object sender, EventArgs e)
+        {
+            //UpdateDGV();
+        }
+
+        private void FormPrincipale_Activated(object sender, EventArgs e)
+        {
+            UpdateDGV();
+        }
     }
 }

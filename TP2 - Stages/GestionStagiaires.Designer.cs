@@ -54,7 +54,7 @@
             this.label2.Location = new System.Drawing.Point(12, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
-            this.label2.TabIndex = 38;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Spécialisation";
             // 
             // BTN_Clear
@@ -63,7 +63,7 @@
             this.BTN_Clear.Location = new System.Drawing.Point(242, 162);
             this.BTN_Clear.Name = "BTN_Clear";
             this.BTN_Clear.Size = new System.Drawing.Size(45, 41);
-            this.BTN_Clear.TabIndex = 36;
+            this.BTN_Clear.TabIndex = 13;
             this.BTN_Clear.UseVisualStyleBackColor = true;
             this.BTN_Clear.Click += new System.EventHandler(this.BTN_Clear_Click);
             // 
@@ -73,7 +73,7 @@
             this.BTN_Edit.Location = new System.Drawing.Point(242, 115);
             this.BTN_Edit.Name = "BTN_Edit";
             this.BTN_Edit.Size = new System.Drawing.Size(45, 41);
-            this.BTN_Edit.TabIndex = 35;
+            this.BTN_Edit.TabIndex = 12;
             this.BTN_Edit.UseVisualStyleBackColor = true;
             this.BTN_Edit.Click += new System.EventHandler(this.BTN_Edit_Click);
             // 
@@ -83,7 +83,7 @@
             this.BTN_Delete.Location = new System.Drawing.Point(242, 68);
             this.BTN_Delete.Name = "BTN_Delete";
             this.BTN_Delete.Size = new System.Drawing.Size(45, 41);
-            this.BTN_Delete.TabIndex = 34;
+            this.BTN_Delete.TabIndex = 11;
             this.BTN_Delete.UseVisualStyleBackColor = true;
             this.BTN_Delete.Click += new System.EventHandler(this.BTN_Delete_Click);
             // 
@@ -93,7 +93,7 @@
             this.BTN_Ajouter.Location = new System.Drawing.Point(242, 21);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(45, 41);
-            this.BTN_Ajouter.TabIndex = 33;
+            this.BTN_Ajouter.TabIndex = 10;
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
@@ -103,7 +103,7 @@
             this.label4.Location = new System.Drawing.Point(12, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 30;
+            this.label4.TabIndex = 2;
             this.label4.Text = "Prénom :";
             // 
             // label3
@@ -112,7 +112,7 @@
             this.label3.Location = new System.Drawing.Point(12, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 29;
+            this.label3.TabIndex = 1;
             this.label3.Text = "Nom :";
             // 
             // label1
@@ -121,7 +121,7 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 28;
+            this.label1.TabIndex = 0;
             this.label1.Text = "#DA";
             // 
             // TB_Prenom
@@ -129,14 +129,14 @@
             this.TB_Prenom.Location = new System.Drawing.Point(90, 60);
             this.TB_Prenom.Name = "TB_Prenom";
             this.TB_Prenom.Size = new System.Drawing.Size(140, 20);
-            this.TB_Prenom.TabIndex = 25;
+            this.TB_Prenom.TabIndex = 7;
             // 
             // TB_Nom
             // 
             this.TB_Nom.Location = new System.Drawing.Point(90, 34);
             this.TB_Nom.Name = "TB_Nom";
             this.TB_Nom.Size = new System.Drawing.Size(140, 20);
-            this.TB_Nom.TabIndex = 24;
+            this.TB_Nom.TabIndex = 6;
             // 
             // DGV_Stagiaires
             // 
@@ -153,7 +153,7 @@
             this.DGV_Stagiaires.RowHeadersWidth = 20;
             this.DGV_Stagiaires.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Stagiaires.Size = new System.Drawing.Size(531, 262);
-            this.DGV_Stagiaires.TabIndex = 42;
+            this.DGV_Stagiaires.TabIndex = 14;
             this.DGV_Stagiaires.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Stagiaires_CellClick);
             // 
             // BTN_Ok
@@ -161,7 +161,7 @@
             this.BTN_Ok.Location = new System.Drawing.Point(787, 277);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(37, 23);
-            this.BTN_Ok.TabIndex = 43;
+            this.BTN_Ok.TabIndex = 15;
             this.BTN_Ok.Text = "Ok";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
@@ -171,14 +171,14 @@
             this.TB_Special.Location = new System.Drawing.Point(90, 113);
             this.TB_Special.Name = "TB_Special";
             this.TB_Special.Size = new System.Drawing.Size(140, 20);
-            this.TB_Special.TabIndex = 44;
+            this.TB_Special.TabIndex = 9;
             // 
             // TB_Courriel
             // 
             this.TB_Courriel.Location = new System.Drawing.Point(90, 86);
             this.TB_Courriel.Name = "TB_Courriel";
             this.TB_Courriel.Size = new System.Drawing.Size(140, 20);
-            this.TB_Courriel.TabIndex = 26;
+            this.TB_Courriel.TabIndex = 8;
             // 
             // label5
             // 
@@ -186,7 +186,7 @@
             this.label5.Location = new System.Drawing.Point(12, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 13);
-            this.label5.TabIndex = 31;
+            this.label5.TabIndex = 3;
             this.label5.Text = "Courriel :";
             // 
             // TB_Numad
@@ -194,7 +194,7 @@
             this.TB_Numad.Location = new System.Drawing.Point(90, 8);
             this.TB_Numad.Name = "TB_Numad";
             this.TB_Numad.Size = new System.Drawing.Size(140, 20);
-            this.TB_Numad.TabIndex = 45;
+            this.TB_Numad.TabIndex = 5;
             // 
             // label6
             // 
@@ -202,7 +202,7 @@
             this.label6.Location = new System.Drawing.Point(12, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(257, 13);
-            this.label6.TabIndex = 46;
+            this.label6.TabIndex = 16;
             this.label6.Text = "No de stage : modifiable dans assignation seulement.";
             // 
             // GestionStagiaires
@@ -228,7 +228,7 @@
             this.Controls.Add(this.TB_Prenom);
             this.Controls.Add(this.TB_Nom);
             this.Name = "GestionStagiaires";
-            this.Text = "Gestion des stagiaires";
+            this.Text = "1";
             this.Load += new System.EventHandler(this.GestionStagiaires_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Stagiaires)).EndInit();
             this.ResumeLayout(false);
