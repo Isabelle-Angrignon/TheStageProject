@@ -16,11 +16,15 @@ namespace TP2___Stages
         {
             InitializeComponent();
         }
-        int i;
-
         private void BTN_Ok_Click(object sender, EventArgs e)
         {
             this.Close();
+		}        
+
+        private void GestionStagiaires_Load(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

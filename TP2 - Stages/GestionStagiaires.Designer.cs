@@ -59,7 +59,7 @@
             // LB_NumStage
             // 
             this.LB_NumStage.AutoSize = true;
-            this.LB_NumStage.Location = new System.Drawing.Point(128, 9);
+            this.LB_NumStage.Location = new System.Drawing.Point(94, 9);
             this.LB_NumStage.Name = "LB_NumStage";
             this.LB_NumStage.Size = new System.Drawing.Size(35, 13);
             this.LB_NumStage.TabIndex = 37;
@@ -68,7 +68,7 @@
             // BTN_ClearStage
             // 
             this.BTN_ClearStage.Image = global::TP2___Stages.Properties.Resources.Clear_Neutral;
-            this.BTN_ClearStage.Location = new System.Drawing.Point(289, 149);
+            this.BTN_ClearStage.Location = new System.Drawing.Point(242, 162);
             this.BTN_ClearStage.Name = "BTN_ClearStage";
             this.BTN_ClearStage.Size = new System.Drawing.Size(45, 41);
             this.BTN_ClearStage.TabIndex = 36;
@@ -77,7 +77,7 @@
             // BTN_EditStage
             // 
             this.BTN_EditStage.Image = global::TP2___Stages.Properties.Resources.Edit_Neutral;
-            this.BTN_EditStage.Location = new System.Drawing.Point(289, 102);
+            this.BTN_EditStage.Location = new System.Drawing.Point(242, 115);
             this.BTN_EditStage.Name = "BTN_EditStage";
             this.BTN_EditStage.Size = new System.Drawing.Size(45, 41);
             this.BTN_EditStage.TabIndex = 35;
@@ -86,7 +86,7 @@
             // BTN_DeleteStage
             // 
             this.BTN_DeleteStage.Image = global::TP2___Stages.Properties.Resources.Delete_Neutral;
-            this.BTN_DeleteStage.Location = new System.Drawing.Point(289, 55);
+            this.BTN_DeleteStage.Location = new System.Drawing.Point(242, 68);
             this.BTN_DeleteStage.Name = "BTN_DeleteStage";
             this.BTN_DeleteStage.Size = new System.Drawing.Size(45, 41);
             this.BTN_DeleteStage.TabIndex = 34;
@@ -95,7 +95,7 @@
             // BTN_AjoutStage
             // 
             this.BTN_AjoutStage.Image = global::TP2___Stages.Properties.Resources.Add_Neutral;
-            this.BTN_AjoutStage.Location = new System.Drawing.Point(289, 8);
+            this.BTN_AjoutStage.Location = new System.Drawing.Point(242, 21);
             this.BTN_AjoutStage.Name = "BTN_AjoutStage";
             this.BTN_AjoutStage.Size = new System.Drawing.Size(45, 41);
             this.BTN_AjoutStage.TabIndex = 33;
@@ -139,21 +139,21 @@
             // 
             // TB_Type
             // 
-            this.TB_Type.Location = new System.Drawing.Point(124, 86);
+            this.TB_Type.Location = new System.Drawing.Point(90, 86);
             this.TB_Type.Name = "TB_Type";
             this.TB_Type.Size = new System.Drawing.Size(140, 20);
             this.TB_Type.TabIndex = 26;
             // 
             // TB_Logiciel
             // 
-            this.TB_Logiciel.Location = new System.Drawing.Point(124, 60);
+            this.TB_Logiciel.Location = new System.Drawing.Point(90, 60);
             this.TB_Logiciel.Name = "TB_Logiciel";
             this.TB_Logiciel.Size = new System.Drawing.Size(140, 20);
             this.TB_Logiciel.TabIndex = 25;
             // 
             // TB_Plateforme
             // 
-            this.TB_Plateforme.Location = new System.Drawing.Point(124, 34);
+            this.TB_Plateforme.Location = new System.Drawing.Point(90, 34);
             this.TB_Plateforme.Name = "TB_Plateforme";
             this.TB_Plateforme.Size = new System.Drawing.Size(140, 20);
             this.TB_Plateforme.TabIndex = 24;
@@ -166,7 +166,7 @@
             this.DGV_GestionStage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGV_GestionStage.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_GestionStage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_GestionStage.Location = new System.Drawing.Point(355, 8);
+            this.DGV_GestionStage.Location = new System.Drawing.Point(293, 9);
             this.DGV_GestionStage.MultiSelect = false;
             this.DGV_GestionStage.Name = "DGV_GestionStage";
             this.DGV_GestionStage.ReadOnly = true;
@@ -177,7 +177,7 @@
             // 
             // BTN_Ok
             // 
-            this.BTN_Ok.Location = new System.Drawing.Point(745, 276);
+            this.BTN_Ok.Location = new System.Drawing.Point(683, 280);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(37, 23);
             this.BTN_Ok.TabIndex = 43;
@@ -187,7 +187,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 113);
+            this.textBox1.Location = new System.Drawing.Point(90, 113);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 20);
             this.textBox1.TabIndex = 44;
@@ -196,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 315);
+            this.ClientSize = new System.Drawing.Size(734, 315);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.DGV_GestionStage);
@@ -215,6 +215,7 @@
             this.Controls.Add(this.TB_Plateforme);
             this.Name = "GestionStagiaires";
             this.Text = "Gestion des stagiaires";
+            this.Load += new System.EventHandler(this.GestionStagiaires_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionStage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
