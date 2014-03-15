@@ -67,7 +67,7 @@
             this.DGV_GestionEnt.ReadOnly = true;
             this.DGV_GestionEnt.RowHeadersWidth = 20;
             this.DGV_GestionEnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_GestionEnt.Size = new System.Drawing.Size(1005, 442);
+            this.DGV_GestionEnt.Size = new System.Drawing.Size(851, 442);
             this.DGV_GestionEnt.TabIndex = 1;
             // 
             // BTN_ClearStage
@@ -238,7 +238,7 @@
             // 
             // BTN_Ok
             // 
-            this.BTN_Ok.Location = new System.Drawing.Point(1310, 488);
+            this.BTN_Ok.Location = new System.Drawing.Point(1172, 488);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(75, 23);
             this.BTN_Ok.TabIndex = 39;
@@ -250,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1413, 523);
+            this.ClientSize = new System.Drawing.Size(1262, 523);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.LB_NumEnt);
             this.Controls.Add(this.TB_Cote);

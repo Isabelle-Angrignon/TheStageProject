@@ -263,5 +263,11 @@ namespace TP2___Stages
             GestionEntreprisecs f = new GestionEntreprisecs();
             f.ShowDialog();
         }
+
+        private void étudiantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionStagiaires f = new GestionStagiaires();
+            f.ShowDialog();
+        }
     }
 }

@@ -74,10 +74,10 @@
             // 
             // étudiantsToolStripMenuItem
             // 
-            this.étudiantsToolStripMenuItem.Enabled = false;
             this.étudiantsToolStripMenuItem.Name = "étudiantsToolStripMenuItem";
             this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.étudiantsToolStripMenuItem.Text = "Étudiants";
+            this.étudiantsToolStripMenuItem.Click += new System.EventHandler(this.étudiantsToolStripMenuItem_Click);
             // 
             // stagesToolStripMenuItem
             // 
