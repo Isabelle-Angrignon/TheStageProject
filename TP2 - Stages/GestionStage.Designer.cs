@@ -40,7 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BTN_Ok = new System.Windows.Forms.Button();
-            this.BTN_Cancel = new System.Windows.Forms.Button();
             this.BTN_AjoutStage = new System.Windows.Forms.Button();
             this.BTN_DeleteStage = new System.Windows.Forms.Button();
             this.BTN_EditStage = new System.Windows.Forms.Button();
@@ -159,19 +158,9 @@
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(75, 23);
             this.BTN_Ok.TabIndex = 13;
-            this.BTN_Ok.Text = "Accepter";
+            this.BTN_Ok.Text = "Okay";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
-            // 
-            // BTN_Cancel
-            // 
-            this.BTN_Cancel.Location = new System.Drawing.Point(1015, 436);
-            this.BTN_Cancel.Name = "BTN_Cancel";
-            this.BTN_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Cancel.TabIndex = 14;
-            this.BTN_Cancel.Text = "Annuler";
-            this.BTN_Cancel.UseVisualStyleBackColor = true;
-            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
             // 
             // BTN_AjoutStage
             // 
@@ -278,7 +267,6 @@
             this.Controls.Add(this.BTN_EditStage);
             this.Controls.Add(this.BTN_DeleteStage);
             this.Controls.Add(this.BTN_AjoutStage);
-            this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -315,7 +303,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BTN_Ok;
-        private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.Button BTN_AjoutStage;
         private System.Windows.Forms.Button BTN_DeleteStage;
         private System.Windows.Forms.Button BTN_EditStage;
