@@ -16,5 +16,6 @@ namespace TP2___Stages
         {
             InitializeComponent();
         }
+        int i;
     }
 }
