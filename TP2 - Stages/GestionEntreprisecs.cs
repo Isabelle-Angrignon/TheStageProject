@@ -15,6 +15,7 @@ namespace TP2___Stages
     {
         public OracleConnection conn = new OracleConnection();
         private DataSet mainDataSet = new DataSet();
+        string PackageEnt = "GESTIONENTREPRISES";
         public GestionEntreprisecs()
         {
             InitializeComponent();
@@ -27,16 +28,17 @@ namespace TP2___Stages
 
         private void GestionEntreprisecs_Load(object sender, EventArgs e)
         {
-            
+            MiseAjour();
         }
         private void MiseAjour()
         {
             RemplirDGV();
+            DonnerCouleur();
         }
         private void RemplirDGV()
         {
-            OracleCommand oraliste = new OracleCommand(PackageStage, conn);
-            oraliste.CommandText = PackageStage + ".LISTER";
+            OracleCommand oraliste = new OracleCommand(PackageEnt, conn);
+            oraliste.CommandText = PackageEnt + ".LISTER";
             oraliste.CommandType = CommandType.StoredProcedure;
 
             OracleParameter OrapameResultat = new OracleParameter("LISTE",
@@ -54,7 +56,26 @@ namespace TP2___Stages
             Oraliste.Dispose();
 
             BindingSource maSource = new BindingSource(mainDataSet, "Liste_stage");
-            DGV_GestionStage.DataSource = maSource;
+            DGV_GestionEnt.DataSource = maSource;
+        }
+        private void DonnerCouleur()
+        {
+            for (int i = 0; i < DGV_GestionEnt.RowCount; i++)
+            {
+                if (int.Parse(DGV_GestionEnt.Rows[i].Cells[7].Value.ToString()) >= 5)
+                {
+                    DGV_GestionEnt.Rows[i].DefaultCellStyle.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    DGV_GestionEnt.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
+        }
+
+        private void DGV_GestionEnt_Paint(object sender, PaintEventArgs e)
+        {
+            DonnerCouleur();
         }
     }
 }

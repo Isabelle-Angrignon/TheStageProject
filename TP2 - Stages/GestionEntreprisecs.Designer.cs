@@ -69,6 +69,7 @@
             this.DGV_GestionEnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_GestionEnt.Size = new System.Drawing.Size(851, 442);
             this.DGV_GestionEnt.TabIndex = 1;
+            this.DGV_GestionEnt.Paint += new System.Windows.Forms.PaintEventHandler(this.DGV_GestionEnt_Paint);
             // 
             // BTN_ClearStage
             // 
