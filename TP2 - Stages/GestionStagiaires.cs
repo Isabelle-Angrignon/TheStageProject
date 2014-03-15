@@ -212,5 +212,10 @@ namespace TP2___Stages
                     break;
             }
         }
+
+        private void DGV_Stagiaires_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RemplirTB();
+        }
     }
 }

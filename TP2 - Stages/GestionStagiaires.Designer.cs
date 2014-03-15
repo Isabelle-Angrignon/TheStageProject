@@ -154,7 +154,7 @@
             this.DGV_Stagiaires.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Stagiaires.Size = new System.Drawing.Size(531, 262);
             this.DGV_Stagiaires.TabIndex = 42;
-            this.DGV_Stagiaires.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Stagiaires_CellContentClick);
+            this.DGV_Stagiaires.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Stagiaires_CellClick);
             // 
             // BTN_Ok
             // 
