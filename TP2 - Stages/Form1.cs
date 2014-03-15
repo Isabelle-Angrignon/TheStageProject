@@ -268,6 +268,7 @@ namespace TP2___Stages
         private void étudiantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GestionStagiaires f = new GestionStagiaires();
+            f.conn = conn;
             f.ShowDialog();
         }
     }

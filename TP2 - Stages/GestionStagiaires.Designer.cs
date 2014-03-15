@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.LB_NumAd = new System.Windows.Forms.Label();
             this.BTN_ClearStage = new System.Windows.Forms.Button();
             this.BTN_EditStage = new System.Windows.Forms.Button();
             this.BTN_DeleteStage = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.TB_Special = new System.Windows.Forms.TextBox();
             this.TB_Courriel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.TB_Numad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Stagiaires)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,15 +55,6 @@
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 38;
             this.label2.Text = "Spécialisation";
-            // 
-            // LB_NumAd
-            // 
-            this.LB_NumAd.AutoSize = true;
-            this.LB_NumAd.Location = new System.Drawing.Point(94, 9);
-            this.LB_NumAd.Name = "LB_NumAd";
-            this.LB_NumAd.Size = new System.Drawing.Size(35, 13);
-            this.LB_NumAd.TabIndex = 37;
-            this.LB_NumAd.Text = "label7";
             // 
             // BTN_ClearStage
             // 
@@ -156,12 +147,13 @@
             this.DGV_Stagiaires.ReadOnly = true;
             this.DGV_Stagiaires.RowHeadersWidth = 20;
             this.DGV_Stagiaires.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Stagiaires.Size = new System.Drawing.Size(427, 262);
+            this.DGV_Stagiaires.Size = new System.Drawing.Size(496, 262);
             this.DGV_Stagiaires.TabIndex = 42;
+            this.DGV_Stagiaires.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Stagiaires_CellContentClick);
             // 
             // BTN_Ok
             // 
-            this.BTN_Ok.Location = new System.Drawing.Point(683, 280);
+            this.BTN_Ok.Location = new System.Drawing.Point(752, 277);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(37, 23);
             this.BTN_Ok.TabIndex = 43;
@@ -192,16 +184,23 @@
             this.label5.TabIndex = 31;
             this.label5.Text = "Courriel :";
             // 
+            // TB_Numad
+            // 
+            this.TB_Numad.Location = new System.Drawing.Point(90, 8);
+            this.TB_Numad.Name = "TB_Numad";
+            this.TB_Numad.Size = new System.Drawing.Size(140, 20);
+            this.TB_Numad.TabIndex = 45;
+            // 
             // GestionStagiaires
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 315);
+            this.ClientSize = new System.Drawing.Size(801, 310);
+            this.Controls.Add(this.TB_Numad);
             this.Controls.Add(this.TB_Special);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.DGV_Stagiaires);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.LB_NumAd);
             this.Controls.Add(this.BTN_ClearStage);
             this.Controls.Add(this.BTN_EditStage);
             this.Controls.Add(this.BTN_DeleteStage);
@@ -225,7 +224,6 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label LB_NumAd;
         private System.Windows.Forms.Button BTN_ClearStage;
         private System.Windows.Forms.Button BTN_EditStage;
         private System.Windows.Forms.Button BTN_DeleteStage;
@@ -240,6 +238,7 @@
         private System.Windows.Forms.TextBox TB_Special;
         private System.Windows.Forms.TextBox TB_Courriel;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TB_Numad;
 
     }
 }
