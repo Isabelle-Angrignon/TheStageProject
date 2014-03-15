@@ -163,7 +163,7 @@ namespace TP2___Stages
                 oParamPlate.Value = TB_Plateforme.Text;
                 oParamLogi.Value = TB_Logiciel.Text;
                 oParamType.Value = TB_Type.Text;
-                //Pour ne garderque la date, sans l'heure
+                //Pour ne garder que la date, sans l'heure
                 string DateDebut = DTP_DebutStage.Value.ToShortDateString();
                 string DateFin = DTP_FinStage.Value.ToShortDateString();
                 oParamDebut.Value = DateTime.Parse(DateDebut);
