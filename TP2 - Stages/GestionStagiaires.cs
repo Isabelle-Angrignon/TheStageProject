@@ -78,8 +78,8 @@ namespace TP2___Stages
          * catch (OracleException ex)
             {
                 ErrorMessage(ex);
-            } */
-
+            } 
+         */
         
 
 
@@ -102,5 +102,134 @@ namespace TP2___Stages
                     break;
             }
         }
+
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+            try  
+            {
+                OracleParameter oParamNumad = new OracleParameter("PNUMAD", OracleDbType.Int32, 9);
+                OracleParameter oParamNom = new OracleParameter("PNOMETUDIANT", OracleDbType.Varchar2, 20);
+                OracleParameter oParamPrenom = new OracleParameter("PPRENOMETUDIANT", OracleDbType.Varchar2, 20);
+                OracleParameter oParamSpec = new OracleParameter("PSPECIALISATION", OracleDbType.Varchar2, 20);
+                OracleParameter oParamCourriel = new OracleParameter("PCOURRIELETUDIANT", OracleDbType.Varchar2, 20);
+                OracleParameter oParamNumStage = new OracleParameter("PNUMSTAGE", OracleDbType.Int32, 5);
+
+                //ajout
+                oParamNumad.Direction = ParameterDirection.Input;
+                oParamNom.Direction = ParameterDirection.Input;
+                oParamPrenom.Direction = ParameterDirection.Input;
+                oParamSpec.Direction = ParameterDirection.Input;
+                oParamCourriel.Direction = ParameterDirection.Input;               
+                oParamNumStage.Direction = ParameterDirection.Input;
+
+                oParamNumad.Value = TB_Numad.Text;
+                oParamNom.Value = TB_Nom.Text;
+                oParamPrenom.Value = TB_Prenom.Text;
+                oParamSpec.Value = TB_Special.Text;
+                oParamCourriel.Value = TB_Courriel.Text;
+                oParamNumStage.Value = TB_NoStage.Text;
+
+                //modif/////
+                OracleCommand orComm = new OracleCommand(Package, conn);
+                orComm.CommandText = Package + ".INSERER";
+                orComm.CommandType = CommandType.StoredProcedure;
+
+                orComm.Parameters.Add(oParamNumad);
+                orComm.Parameters.Add(oParamNom);
+                orComm.Parameters.Add(oParamPrenom);
+                orComm.Parameters.Add(oParamSpec);
+                orComm.Parameters.Add(oParamCourriel);
+                orComm.Parameters.Add(oParamNumStage);
+                orComm.ExecuteNonQuery();
+
+                RemplirDGV();
+            }
+            catch (OracleException ex) { ErrorMessage(ex);      }
+            catch (Exception ex) { MessageBox.Show(ex.Message); } 
+        }
+
+        private void BTN_Edit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleParameter oParamNumad = new OracleParameter("PNUMAD", OracleDbType.Int32, 9);
+                OracleParameter oParamNom = new OracleParameter("PNOMETUDIANT", OracleDbType.Varchar2, 20);
+                OracleParameter oParamPrenom = new OracleParameter("PPRENOMETUDIANT", OracleDbType.Varchar2, 20);
+                OracleParameter oParamSpec = new OracleParameter("PSPECIALISATION", OracleDbType.Varchar2, 20);
+                OracleParameter oParamCourriel = new OracleParameter("PCOURRIELETUDIANT", OracleDbType.Varchar2, 20);
+                OracleParameter oParamNumStage = new OracleParameter("PNUMSTAGE", OracleDbType.Int32, 5);
+
+                //ajout
+                oParamNumad.Direction = ParameterDirection.Input;
+                oParamNom.Direction = ParameterDirection.Input;
+                oParamPrenom.Direction = ParameterDirection.Input;
+                oParamSpec.Direction = ParameterDirection.Input;
+                oParamCourriel.Direction = ParameterDirection.Input;
+                oParamNumStage.Direction = ParameterDirection.Input;
+
+                oParamNumad.Value = TB_Numad.Text;
+                oParamNom.Value = TB_Nom.Text;
+                oParamPrenom.Value = TB_Prenom.Text;
+                oParamSpec.Value = TB_Special.Text;
+                oParamCourriel.Value = TB_Courriel.Text;
+                oParamNumStage.Value = TB_NoStage.Text;
+
+                //modif/////
+                OracleCommand orComm = new OracleCommand(Package, conn);
+                orComm.CommandText = Package + ".MODIFIER";
+                orComm.CommandType = CommandType.StoredProcedure;
+
+                orComm.Parameters.Add(oParamNumad);
+                orComm.Parameters.Add(oParamNom);
+                orComm.Parameters.Add(oParamPrenom);
+                orComm.Parameters.Add(oParamSpec);
+                orComm.Parameters.Add(oParamCourriel);
+                orComm.Parameters.Add(oParamNumStage);
+                orComm.ExecuteNonQuery();
+
+                RemplirDGV();
+            }
+            catch (OracleException ex) { ErrorMessage(ex); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); } 
+        }
+
+        private void BTN_Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Voulez-vous vraiment supprimer cet enregistrement?", "Attention", MessageBoxButtons.YesNo) ==
+                    System.Windows.Forms.DialogResult.Yes)
+                {
+                    OracleParameter oParamNumStage = new OracleParameter("PNUMAD", OracleDbType.Int32, 5);
+                    oParamNumStage.Direction = ParameterDirection.Input;
+                    oParamNumStage.Value = TB_Numad.Text;
+
+                    OracleCommand orComm = new OracleCommand(Package, conn);
+                    orComm.CommandText = Package + ".SUPPRIMER";
+                    orComm.CommandType = CommandType.StoredProcedure;
+                    orComm.Parameters.Add(oParamNumStage);
+                    orComm.ExecuteNonQuery();
+
+                    RemplirDGV();
+                }
+            }
+            catch (OracleException ex) { ErrorMessage(ex); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void BTN_Clear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void Clear()
+        {
+            TB_Numad.Text = "";
+            TB_Nom.Text = "";
+            TB_Prenom.Text = "";
+            TB_Special.Text = "";
+            TB_Courriel.Text = "";
+            TB_NoStage.Text = "";
+        }        
     }
 }
