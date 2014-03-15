@@ -236,5 +236,33 @@ namespace TP2___Stages
             }
             catch (OracleException ex) { MessageBox.Show(ex.Message); }
         }
+
+        private void DGV_GestionEnt_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenuStrip DGV_ContextMenu = new ContextMenuStrip();
+
+                ToolStripMenuItem TSMI = new ToolStripMenuItem("Créer un stage");
+                TSMI.Click += TSMI_CreerStage_Click;/////
+                DGV_ContextMenu.Items.Add(TSMI);
+                // fait quoi?
+                DGV_ContextMenu.Show(DGV_GestionEnt, DGV_GestionEnt.PointToClient(Cursor.Position));
+            }
+        }
+
+
+        private void TSMI_CreerStage_Click(object sender, EventArgs e)
+        {
+            GestionStage f = new GestionStage();
+            f.conn = conn;
+            try
+            {
+                //// cast pas valid/////
+                f.NumEnt = DGV_GestionEnt.SelectedRows[0].Cells[0].Value.ToString();                
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); };
+            f.ShowDialog();
+        }
     }
 }

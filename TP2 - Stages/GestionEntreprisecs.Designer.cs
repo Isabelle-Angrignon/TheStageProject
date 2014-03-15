@@ -70,6 +70,7 @@
             this.DGV_GestionEnt.Size = new System.Drawing.Size(757, 442);
             this.DGV_GestionEnt.TabIndex = 1;
             this.DGV_GestionEnt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_GestionEnt_CellClick);
+            this.DGV_GestionEnt.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_GestionEnt_CellMouseDown);
             this.DGV_GestionEnt.Paint += new System.Windows.Forms.PaintEventHandler(this.DGV_GestionEnt_Paint);
             // 
             // BTN_ClearStage

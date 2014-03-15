@@ -16,6 +16,7 @@ namespace TP2___Stages
         public OracleConnection conn = new OracleConnection();
         private DataSet mainDataSet = new DataSet();
         int NumStageDefaut = 0;
+        public string NumEnt = ""; // pour recevoir un num entreprise pour fin d'ajou de stage à cette entreprise...
         string PackageStage = "GESTIONSTAGES";
         public GestionStage()
         {
@@ -26,6 +27,11 @@ namespace TP2___Stages
         {
             this.BackColor = Properties.Settings.Default.CouleurFond;
             MiseAJour();
+            if (NumEnt != "")
+            {
+                Clear();
+                TB_NumEnt.Text = NumEnt;
+            }
         }
 
         private void BTN_Ok_Click(object sender, EventArgs e)
