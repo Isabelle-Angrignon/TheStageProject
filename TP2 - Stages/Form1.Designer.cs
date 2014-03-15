@@ -115,6 +115,8 @@
             this.DGV_Places.AllowUserToDeleteRows = false;
             this.DGV_Places.AllowUserToResizeColumns = false;
             this.DGV_Places.AllowUserToResizeRows = false;
+            this.DGV_Places.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_Places.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Places.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Places.Location = new System.Drawing.Point(30, 323);
             this.DGV_Places.MultiSelect = false;
@@ -141,6 +143,8 @@
             this.DGV_Etudiants.AllowUserToDeleteRows = false;
             this.DGV_Etudiants.AllowUserToResizeColumns = false;
             this.DGV_Etudiants.AllowUserToResizeRows = false;
+            this.DGV_Etudiants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_Etudiants.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Etudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Etudiants.Location = new System.Drawing.Point(30, 94);
             this.DGV_Etudiants.MultiSelect = false;
@@ -156,6 +160,8 @@
             this.DGV_Stages.AllowUserToDeleteRows = false;
             this.DGV_Stages.AllowUserToResizeColumns = false;
             this.DGV_Stages.AllowUserToResizeRows = false;
+            this.DGV_Stages.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_Stages.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Stages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Stages.Location = new System.Drawing.Point(375, 94);
             this.DGV_Stages.MultiSelect = false;
