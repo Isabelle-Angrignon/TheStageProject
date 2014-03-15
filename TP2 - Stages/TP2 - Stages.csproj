@@ -61,6 +61,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GestionEntreprisecs.Designer.cs" />
+    <Compile Include="GestionEntreprisecs.Designer.cs">
+      <DependentUpon>GestionEntreprisecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionStage.cs">
       <SubType>Form</SubType>
     </Compile>
