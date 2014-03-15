@@ -44,7 +44,6 @@
             this.TB_Courriel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TB_Numad = new System.Windows.Forms.TextBox();
-            this.TB_NoStage = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Stagiaires)).BeginInit();
             this.SuspendLayout();
@@ -197,28 +196,20 @@
             this.TB_Numad.Size = new System.Drawing.Size(140, 20);
             this.TB_Numad.TabIndex = 45;
             // 
-            // TB_NoStage
-            // 
-            this.TB_NoStage.Location = new System.Drawing.Point(90, 140);
-            this.TB_NoStage.Name = "TB_NoStage";
-            this.TB_NoStage.Size = new System.Drawing.Size(140, 20);
-            this.TB_NoStage.TabIndex = 47;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 143);
+            this.label6.Location = new System.Drawing.Point(12, 221);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.Size = new System.Drawing.Size(257, 13);
             this.label6.TabIndex = 46;
-            this.label6.Text = "No de stage";
+            this.label6.Text = "No de stage : modifiable dans assignation seulement.";
             // 
             // GestionStagiaires
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 310);
-            this.Controls.Add(this.TB_NoStage);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TB_Numad);
             this.Controls.Add(this.TB_Special);
@@ -263,7 +254,6 @@
         private System.Windows.Forms.TextBox TB_Courriel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TB_Numad;
-        private System.Windows.Forms.TextBox TB_NoStage;
         private System.Windows.Forms.Label label6;
 
     }
