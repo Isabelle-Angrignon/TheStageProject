@@ -58,7 +58,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(825, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(871, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,21 +75,21 @@
             // étudiantsToolStripMenuItem
             // 
             this.étudiantsToolStripMenuItem.Name = "étudiantsToolStripMenuItem";
-            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.étudiantsToolStripMenuItem.Text = "Étudiants";
             this.étudiantsToolStripMenuItem.Click += new System.EventHandler(this.étudiantsToolStripMenuItem_Click);
             // 
             // stagesToolStripMenuItem
             // 
             this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
-            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.stagesToolStripMenuItem.Text = "Stages";
             this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
             // 
             // entreprisesToolStripMenuItem
             // 
             this.entreprisesToolStripMenuItem.Name = "entreprisesToolStripMenuItem";
-            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.entreprisesToolStripMenuItem.Text = "Entreprises";
             this.entreprisesToolStripMenuItem.Click += new System.EventHandler(this.entreprisesToolStripMenuItem_Click);
             // 
@@ -129,7 +129,7 @@
             // 
             // BN_Assigner
             // 
-            this.BN_Assigner.Location = new System.Drawing.Point(701, 275);
+            this.BN_Assigner.Location = new System.Drawing.Point(768, 275);
             this.BN_Assigner.Name = "BN_Assigner";
             this.BN_Assigner.Size = new System.Drawing.Size(91, 23);
             this.BN_Assigner.TabIndex = 5;
@@ -168,7 +168,7 @@
             this.DGV_Stages.Name = "DGV_Stages";
             this.DGV_Stages.ReadOnly = true;
             this.DGV_Stages.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Stages.Size = new System.Drawing.Size(417, 175);
+            this.DGV_Stages.Size = new System.Drawing.Size(484, 175);
             this.DGV_Stages.TabIndex = 7;
             // 
             // label1
@@ -213,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 595);
+            this.ClientSize = new System.Drawing.Size(871, 595);
             this.Controls.Add(this.BN_TypeInfo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

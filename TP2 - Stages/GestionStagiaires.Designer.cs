@@ -152,13 +152,13 @@
             this.DGV_Stagiaires.ReadOnly = true;
             this.DGV_Stagiaires.RowHeadersWidth = 20;
             this.DGV_Stagiaires.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Stagiaires.Size = new System.Drawing.Size(496, 262);
+            this.DGV_Stagiaires.Size = new System.Drawing.Size(531, 262);
             this.DGV_Stagiaires.TabIndex = 42;
             this.DGV_Stagiaires.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Stagiaires_CellContentClick);
             // 
             // BTN_Ok
             // 
-            this.BTN_Ok.Location = new System.Drawing.Point(752, 277);
+            this.BTN_Ok.Location = new System.Drawing.Point(787, 277);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(37, 23);
             this.BTN_Ok.TabIndex = 43;
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 310);
+            this.ClientSize = new System.Drawing.Size(836, 310);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TB_Numad);
             this.Controls.Add(this.TB_Special);

@@ -1,6 +1,6 @@
 ﻿namespace TP2___Stages
 {
-    partial class GestionEntreprisecs
+    partial class GestionEntreprises
     {
         /// <summary>
         /// Required designer variable.
@@ -252,7 +252,7 @@
             this.BTN_Ok.UseVisualStyleBackColor = true;
             this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
             // 
-            // GestionEntreprisecs
+            // GestionEntreprises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -279,8 +279,8 @@
             this.Controls.Add(this.BTN_DeleteStage);
             this.Controls.Add(this.BTN_AjoutStage);
             this.Controls.Add(this.DGV_GestionEnt);
-            this.Name = "GestionEntreprisecs";
-            this.Text = "Gestion Entreprise";
+            this.Name = "GestionEntreprises";
+            this.Text = "Gestion Entreprises";
             this.Load += new System.EventHandler(this.GestionEntreprisecs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GestionEnt)).EndInit();
             this.ResumeLayout(false);

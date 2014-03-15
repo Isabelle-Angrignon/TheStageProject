@@ -11,12 +11,12 @@ using Oracle.DataAccess.Client;
 
 namespace TP2___Stages
 {
-    public partial class GestionEntreprisecs : Form
+    public partial class GestionEntreprises : Form
     {
         public OracleConnection conn = new OracleConnection();
         private DataSet mainDataSet = new DataSet();
         string PackageEnt = "GESTIONENTREPRISES";
-        public GestionEntreprisecs()
+        public GestionEntreprises()
         {
             InitializeComponent();
         }
@@ -59,6 +59,7 @@ namespace TP2___Stages
             DGV_GestionEnt.DataSource = maSource;
             RemplirTB();
         }
+
         private void DonnerCouleur()
         {
             for (int i = 0; i < DGV_GestionEnt.RowCount; i++)
@@ -79,7 +80,6 @@ namespace TP2___Stages
             DonnerCouleur();
         }
 
-
         private void RemplirTB()
         {
             LB_NumEnt.Text = DGV_GestionEnt.SelectedRows[0].Cells[0].Value.ToString();
@@ -90,7 +90,6 @@ namespace TP2___Stages
             TB_Courriel.Text = DGV_GestionEnt.SelectedRows[0].Cells[5].Value.ToString();
             TB_Tel.Text = DGV_GestionEnt.SelectedRows[0].Cells[6].Value.ToString();
             TB_Cote.Text = DGV_GestionEnt.SelectedRows[0].Cells[7].Value.ToString();
-            
         }
 
         private void DGV_GestionEnt_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -102,6 +101,7 @@ namespace TP2___Stages
         {
             Clear();
         }
+
         private void Clear()
         {
             LB_NumEnt.Text = "";
@@ -125,8 +125,7 @@ namespace TP2___Stages
                 OracleParameter oParamCour = new OracleParameter("PCOURIELENT", OracleDbType.Varchar2,30);
                 OracleParameter oParamTel = new OracleParameter("PTELEPHONEENT", OracleDbType.Varchar2,20);
                 OracleParameter oParamCote = new OracleParameter("PCOTEENT", OracleDbType.Int32, 2);
-                
-
+             
                 //ajout
                 oParamNom.Direction = ParameterDirection.Input;
                 oParamCont.Direction = ParameterDirection.Input;
@@ -135,7 +134,6 @@ namespace TP2___Stages
                 oParamCour.Direction = ParameterDirection.Input;
                 oParamTel.Direction = ParameterDirection.Input;
                 oParamCote.Direction = ParameterDirection.Input;
-
 
                 oParamNom.Value = TB_Nom.Text;
                 oParamCont.Value = TB_Contact.Text;
@@ -177,7 +175,6 @@ namespace TP2___Stages
                 OracleParameter oParamTel = new OracleParameter("PTELEPHONEENT", OracleDbType.Varchar2, 20);
                 OracleParameter oParamCote = new OracleParameter("PCOTEENT", OracleDbType.Int32, 2);
 
-
                 //ajout
                 oParamNum.Direction = ParameterDirection.Input;
                 oParamNom.Direction = ParameterDirection.Input;
@@ -187,7 +184,6 @@ namespace TP2___Stages
                 oParamCour.Direction = ParameterDirection.Input;
                 oParamTel.Direction = ParameterDirection.Input;
                 oParamCote.Direction = ParameterDirection.Input;
-
 
                 oParamNum.Value = LB_NumEnt.Text;
                 oParamNom.Value = TB_Nom.Text;
