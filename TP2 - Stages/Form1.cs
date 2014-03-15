@@ -103,32 +103,37 @@ namespace TP2___Stages
 
         private void RemplirDGVEtudiants()
         {
-            OracleCommand oraliste = new OracleCommand(Package, conn);
-            oraliste.CommandText = Package + ".LISTESTAGIAIRES";
-            oraliste.CommandType = CommandType.StoredProcedure;
-
-            OracleParameter OrapameResultat = new OracleParameter("ENREG",
-            OracleDbType.RefCursor);
-            OrapameResultat.Direction = ParameterDirection.ReturnValue;
-            oraliste.Parameters.Add(OrapameResultat);
-
-            OracleParameter OrapamTypeInfo = new
-            OracleParameter("PTYPE", OracleDbType.Varchar2);
-            OrapamTypeInfo.Value = BN_TypeInfo.Text;
-            OrapamTypeInfo.Direction = ParameterDirection.Input;
-            oraliste.Parameters.Add(OrapamTypeInfo);
-
-            OracleDataAdapter Oraliste = new OracleDataAdapter(oraliste);
-
-            if (mainDataSet.Tables.Contains("Liste_Etudiants"))
+            try
             {
-                mainDataSet.Tables["Liste_Etudiants"].Clear();
-            }
-            Oraliste.Fill(mainDataSet, "Liste_Etudiants");
-            Oraliste.Dispose();
+                OracleCommand oraliste = new OracleCommand(Package, conn);
+                oraliste.CommandText = Package + ".LISTESTAGIAIRES";
+                oraliste.CommandType = CommandType.StoredProcedure;
 
-            BindingSource maSource = new BindingSource(mainDataSet, "Liste_Etudiants");
-            DGV_Etudiants.DataSource = maSource;
+                OracleParameter OrapameResultat = new OracleParameter("ENREG",
+                OracleDbType.RefCursor);
+                OrapameResultat.Direction = ParameterDirection.ReturnValue;
+                oraliste.Parameters.Add(OrapameResultat);
+
+                OracleParameter OrapamTypeInfo = new
+                OracleParameter("PTYPE", OracleDbType.Varchar2);
+                OrapamTypeInfo.Value = BN_TypeInfo.Text;
+                OrapamTypeInfo.Direction = ParameterDirection.Input;
+                oraliste.Parameters.Add(OrapamTypeInfo);
+
+                OracleDataAdapter Oraliste = new OracleDataAdapter(oraliste);
+
+                if (mainDataSet.Tables.Contains("Liste_Etudiants"))
+                {
+                    mainDataSet.Tables["Liste_Etudiants"].Clear();
+                }
+                Oraliste.Fill(mainDataSet, "Liste_Etudiants");
+                Oraliste.Dispose();
+
+                BindingSource maSource = new BindingSource(mainDataSet, "Liste_Etudiants");
+                DGV_Etudiants.DataSource = maSource;
+            }
+            catch (OracleException ex) { MessageBox.Show(ex.Message); } 
+
         }
 
         private void RemplirDGVStages()
@@ -141,6 +146,12 @@ namespace TP2___Stages
             OracleDbType.RefCursor);
             OrapameResultat.Direction = ParameterDirection.ReturnValue;
             oraliste.Parameters.Add(OrapameResultat);
+
+            OracleParameter OrapamTypeInfo = new
+            OracleParameter("PTYPE", OracleDbType.Varchar2);
+            OrapamTypeInfo.Value = BN_TypeInfo.Text;
+            OrapamTypeInfo.Direction = ParameterDirection.Input;
+            oraliste.Parameters.Add(OrapamTypeInfo);
 
             OracleDataAdapter Oraliste = new OracleDataAdapter(oraliste);
 
