@@ -17,6 +17,7 @@ namespace TP2___Stages
         private DataSet mainDataSet = new DataSet();
         int NumStageDefaut = 0;
         public string NumEnt = ""; // pour recevoir un num entreprise pour fin d'ajou de stage à cette entreprise...
+
         string PackageStage = "GESTIONSTAGES";
         public GestionStage()
         {
