@@ -15,9 +15,7 @@ namespace TP2___Stages
     {
         public OracleConnection conn = new OracleConnection();
         private DataSet mainDataSet = new DataSet();
-        int NumStageDefaut = 0;
-        public string NumEnt = ""; // pour recevoir un num entreprise pour fin d'ajou de stage à cette entreprise...
-
+        public string NumEnt = ""; // Recoit un num entreprise pour fin d'ajout de stage à cette entreprise...
         string PackageStage = "GESTIONSTAGES";
         public GestionStage()
         {
@@ -38,11 +36,6 @@ namespace TP2___Stages
         private void BTN_Ok_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        private void BTN_Cancel_Click(object sender, EventArgs e)
-        {
             this.Close();
         }
 

@@ -278,7 +278,11 @@ namespace TP2___Stages
                 case 01438:
                     // Si le number est plus long que spécifié
                     MessageBox.Show("La cote doit être entre 0 et 10");
-                    break;                
+                    break;
+                case 02290:
+                    //check not in : cote > 0 et < 10
+                    MessageBox.Show("La cote doit être entre 0 et 10");
+                    break;
                 default: MessageBox.Show(Ex.Message.ToString());
                     break;
             }

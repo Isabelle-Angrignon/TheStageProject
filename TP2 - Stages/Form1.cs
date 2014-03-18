@@ -51,6 +51,8 @@ namespace TP2___Stages
             }
         }
 
+        //Gestion du bouton qui change le profil de gestion à industriel ou vice-versa
+        //On change le texte du bouton, les propriétés des couleurs met a jour les dgv.
         private void BN_TypeInfo_Click(object sender, EventArgs e)
         {
             string Nom = BN_TypeInfo.Text;
@@ -78,7 +80,9 @@ namespace TP2___Stages
             TTIP_profil.SetToolTip(BN_TypeInfo, "Changer de profil");
             DonnerCouleur();
         }
-
+        //Met a jour la couleur du fond 
+        //On peut y ajouter toute autre fonction éventuelle de formatage
+        // est appelé chaque fois qu'on fait un changement qui affecte le Form1.
         private void MettreAJour()
         {
             this.BackColor = Properties.Settings.Default.CouleurFond;
@@ -91,7 +95,8 @@ namespace TP2___Stages
             form.ShowDialog();
             MettreAJour();
         }
-
+        //Si la souris est sur le bouton de choix de profil, un tool tip s'affiche
+        //cetool tip dit de cliquer pour changer le profil.
         private void BN_TypeInfo_MouseHover(object sender, EventArgs e)
         {
             TTIP_profil.Active = true;
@@ -104,6 +109,9 @@ namespace TP2___Stages
             RemplirDGVPlaces();
         }
 
+        // Utilise la fontion listestagiaires du package gestionaffectation
+        // qui retourne un refcursor
+        //Liste tous les étudiants du profil (type) choisi qui n'ontpas de numstage
         private void RemplirDGVEtudiants()
         {
             try
@@ -138,7 +146,10 @@ namespace TP2___Stages
             catch (OracleException ex) { MessageBox.Show(ex.Message); } 
 
         }
-
+        // Utilise la fontion listestagesdispo du package gestionaffectation
+        // qui retourne un refcursor
+        // Liste tous les stages qui n'apparaissent pas dans la listes des stagiaires placés
+        // selon le profil (type) choisi
         private void RemplirDGVStages()
         {
             OracleCommand oraliste = new OracleCommand(Package, conn);
@@ -170,6 +181,9 @@ namespace TP2___Stages
             DGV_Stages.DataSource = maSource;
         }
 
+        // Utilise la fontion listeplaces du package gestionaffectation
+        // qui retourne un refcursor
+        // Liste tous les étudiants dans le profil choisi qui ont une valeur de numstage.
         private void RemplirDGVPlaces()
         {
             OracleCommand oraliste = new OracleCommand(Package, conn);
@@ -200,11 +214,13 @@ namespace TP2___Stages
             DGV_Places.DataSource = maSource;
         }
 
+        
         private void BN_Assigner_Click(object sender, EventArgs e)
         {
             Assigner();
         }
-
+        //Update l'employé sélectionné dans le dgv des stagiaires (par numad)
+        //en lui donnant le numstage sélection dans l'autre dgv stages dispo.
         private void Assigner()
         {
             try
@@ -232,7 +248,8 @@ namespace TP2___Stages
 
             catch (Exception ex) { MessageBox.Show("Il n'y a plus d'étudiant à assigner"); }
         }
-
+        //Sur le dgv des stagiaires placés:
+        // affiche un tool strip menu qui donne l'option de désassigner un stage.
         private void DGV_Places_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -254,7 +271,8 @@ namespace TP2___Stages
                 Desassigner();
             }
         }
-
+        //Update l'employé sélectionné dans le dgv des stagiaires (par numad)
+        //en lui donnant le numstage sélection dans l'autre dgv stages dispo.
         private void Desassigner()
         {
             OracleCommand oraliste = new OracleCommand(Package, conn);
@@ -286,12 +304,16 @@ namespace TP2___Stages
             f.conn = conn;
             f.ShowDialog();
             MettreAJour();
-        }
+        }     
 
+        //S'assure de remettre a jour les dgv si on a ajouté supprimé ou modifié une liste via
+        //un autre form.
         private void FormPrincipale_Activated(object sender, EventArgs e)
         {
             MettreAJour();
         }
+        //Affecte la couleur au dgv des stages disponibles selon la valeur de la
+        //cote de l'entreprise
         private void DonnerCouleur()
         {
             for (int i = 0; i < DGV_Stages.RowCount; i++)
