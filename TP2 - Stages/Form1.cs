@@ -82,12 +82,14 @@ namespace TP2___Stages
         private void MettreAJour()
         {
             this.BackColor = Properties.Settings.Default.CouleurFond;
+            UpdateDGV();
         }
 
         private void àProposToolStripMenuItem_Click(object sender, EventArgs e)
         {
             APropos form = new APropos();
             form.ShowDialog();
+            MettreAJour();
         }
 
         private void BN_TypeInfo_MouseHover(object sender, EventArgs e)
@@ -275,23 +277,20 @@ namespace TP2___Stages
             GestionEntreprises f = new GestionEntreprises();
             f.conn = conn;
             f.ShowDialog();
-        }
+            MettreAJour();
+        } 
 
         private void étudiantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GestionStagiaires f = new GestionStagiaires();
             f.conn = conn;
             f.ShowDialog();
-        }
-
-        private void FormPrincipale_Enter(object sender, EventArgs e)
-        {
-            //UpdateDGV();
+            MettreAJour();
         }
 
         private void FormPrincipale_Activated(object sender, EventArgs e)
         {
-            UpdateDGV();
+            MettreAJour();
         }
         private void DonnerCouleur()
         {

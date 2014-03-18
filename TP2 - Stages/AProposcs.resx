@@ -119,13 +119,13 @@
   </resheader>
   <data name="label1.Text" xml:space="preserve">
     <value>Gestion des stages.
-Version : 1.0
+Version : 1.01
 Fait par : Isabelle Angrignon , Simon Bouchard et Léa Kelly
-
+1.0
 Cette application propose d'assigner un stage à un étudiant. Bien sur elle propose aussi de 
 créer , modifier ou suprimer des stages au besoin.
-
-À venir : Implémentation d'une modification , création et supression des entreprises et des 
+1.01
+Implémentation d'une modification , création et supression des entreprises et des 
 stagiaires.</value>
   </data>
 </root>

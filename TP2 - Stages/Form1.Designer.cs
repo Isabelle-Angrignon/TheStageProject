@@ -75,21 +75,21 @@
             // étudiantsToolStripMenuItem
             // 
             this.étudiantsToolStripMenuItem.Name = "étudiantsToolStripMenuItem";
-            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.étudiantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.étudiantsToolStripMenuItem.Text = "Stagiaires";
             this.étudiantsToolStripMenuItem.Click += new System.EventHandler(this.étudiantsToolStripMenuItem_Click);
             // 
             // stagesToolStripMenuItem
             // 
             this.stagesToolStripMenuItem.Name = "stagesToolStripMenuItem";
-            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.stagesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stagesToolStripMenuItem.Text = "Stages";
             this.stagesToolStripMenuItem.Click += new System.EventHandler(this.stagesToolStripMenuItem_Click);
             // 
             // entreprisesToolStripMenuItem
             // 
             this.entreprisesToolStripMenuItem.Name = "entreprisesToolStripMenuItem";
-            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.entreprisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.entreprisesToolStripMenuItem.Text = "Entreprises";
             this.entreprisesToolStripMenuItem.Click += new System.EventHandler(this.entreprisesToolStripMenuItem_Click);
             // 
@@ -230,7 +230,6 @@
             this.Text = "Affectation des stages";
             this.Activated += new System.EventHandler(this.FormPrincipale_Activated);
             this.Load += new System.EventHandler(this.FormPrincipale_Load);
-            this.Enter += new System.EventHandler(this.FormPrincipale_Enter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Places)).EndInit();
